@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-around;
+  justify-content: space-between;
   background: white;
   border: 1px solid transparent;
   position:sticky;
@@ -7,6 +7,9 @@
   transition: 0.5s background-color ease;
 }
 
+h4 {
+  padding-right: 40px;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
