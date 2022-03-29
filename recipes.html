@@ -1,0 +1,1788 @@
+<div class="searchResults__content">
+  <form action="/search/results/" method="get" id="faceted-search-filters-form" class="faceted-search-filters-form" data-submit-ajax-end-point="/element-api/content-proxy/faceted-searches-submit" data-q-name="search" data-tracking-zone="search-filters">
+  <div id="faceted-search-filters" class="component faceted-search-filters">
+    <div class="faceted-search-filters-wrapper" style="top: 60px; max-height: calc(100vh - 60px);">
+      <div class="faceted-search-filters-top">
+        <button id="faceted-search-filters-close" class="faceted-search-filters-close elementButton__resetButton" aria-label="Close filters" type="button">
+          <span class="icon icon-close utility-icon"><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.41L12.59 0 7 5.59 1.41 0 0 1.41 5.59 7 0 12.59 1.41 14 7 8.41 12.59 14 14 12.59 8.41 7z"></path></svg></span>
+        </button>
+        <h2 class="faceted-search-filters-heading elementFont__subhead">Filters</h2>
+        <button id="faceted-search-filters-clearall" class="faceted-search-filters-clearall elementButton__little elementButton__outlined--smaller" type="button">
+          Clear all
+        </button>
+      </div>
+        <div class="faceted-search-filters-available faceted-search-filters-scrollable">
+            <div class="faceted-search-filters-available-item faceted-search-filters-available-input-wrapper">
+              <div class="faceted-search-filters-available-item-header">
+                <label for="faceted-search-filters-available-input-search" class="faceted-search-filters-available-input-label elementFont__body--bold">
+                  Recipe or keyword
+                </label>
+
+                  <button aria-label="Expand or collapse filter" class="faceted-search-filters-available-item-header-collapse-button elementButton__icon" aria-expanded="false" type="button">
+                    <span class="icon icon-up utility-icon"><svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#0a1529" d="M12 6l-1.41 1.41L6 2.83 1.41 7.41 0 6l6-6z"></path></svg>
+                    </span>
+                    <span class="icon icon-down utility-icon"><svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z"></path></svg></span>
+                  </button>
+              </div>
+              <div class="faceted-search-filters-available-item-body">
+                  <input id="faceted-search-filters-available-input-search" name="search" class="faceted-search-filters-available-input
+                    faceted-search-filters-available-input-search
+                    " placeholder="Keywords">
+              </div>
+            </div>
+            <div class="faceted-search-filters-available-item faceted-search-filters-available-options-wrapper faceted-search-filters__selectChip">
+              <div class="faceted-search-filters-available-item-header">
+                <label for="faceted-search-filters-available-options-ingredients" class="faceted-search-filters-available-input-label elementFont__body--bold">
+                  Ingredients
+                </label>
+
+                  <button aria-label="Expand or collapse filter" class="faceted-search-filters-available-item-header-collapse-button elementButton__icon" aria-expanded="false" type="button">
+                    <span class="icon icon-up utility-icon"><svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#0a1529" d="M12 6l-1.41 1.41L6 2.83 1.41 7.41 0 6l6-6z"></path></svg>
+                    </span>
+                    <span class="icon icon-down utility-icon"><svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z"></path></svg></span>
+                  </button>
+              </div>
+              <div class="faceted-search-filters-available-item-body">
+                  <div class="faceted-search-filters-available-item-filter-choices-wrapper include-option">
+                    <div class="faceted-search-filters-available-option-header elementFont__subtitle--bold">Include these ingredients</div>
+                    <div class="faceted-search-filters-available-item-filter-choices-input-wrapper">
+                      <input aria-label="Enter Ingredients to include filter choices" class="faceted-search-filters-available-item-filter-choices option include-option" placeholder="Include ingredients">
+                      <span class="icon include-option js-activate" tabindex="0">
+                        <span class="icon icon-add-circle default-icon color-navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Add ingredient"><path fill="#000" fill-opacity=".65" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path></svg>
+                        </span>
+                      </span>
+                    </div>
+                    <div aria-live="polite" aria-atomic="true" class="faceted-search-filters-available-item-filter-choices-screenreader-label visually-hidden">
+                    </div>
+                  </div>
+                  <fieldset class="faceted-search-filters-available-item-select-wrapper faceted-search-filters-available-item-select-wrapper-button">
+                    <legend class="visually-hidden">Filter by including Ingredients</legend>
+                    <div class="faceted-search-filters-available-item-select-input-wrapper hide">
+                      <input class="faceted-search-filters-available-item-select-input visually-hidden" type="checkbox" value="IngIncl" data-variant="" tabindex="-1" checked="">
+                      <label class="faceted-search-filters-available-item-select-label option include-option" tabindex="-1">
+                        <span class="faceted-search-filters-available-item-select-label-inner"></span>
+                        <a class="filter-action close-icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Remove ingredient"><path fill="#FFF" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
+                  </a>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <div class="faceted-search-filters-available-item-filter-choices-wrapper exclude-option">
+                    <div class="faceted-search-filters-available-option-header elementFont__subtitle--bold">Do not include these ingredients</div>
+                    <div class="faceted-search-filters-available-item-filter-choices-input-wrapper">
+                      <input aria-label="Enter Ingredients to exclude filter choices" class="faceted-search-filters-available-item-filter-choices option exclude-option" placeholder="Exclude ingredients">
+                      <span class="icon exclude-option js-activate" tabindex="0">
+                        <span class="icon icon-remove-circle default-icon color-navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Remove ingredient"><path fill="#000" fill-opacity=".65" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"></path></svg>
+                        </span>
+                      </span>
+                    </div>
+                    <div aria-live="polite" aria-atomic="true" class="faceted-search-filters-available-item-filter-choices-screenreader-label visually-hidden">
+                    </div>
+                  </div>
+                  <fieldset class="faceted-search-filters-available-item-select-wrapper faceted-search-filters-available-item-select-wrapper-button">
+                    <legend class="visually-hidden">Filter by excluding Ingredients</legend>
+                    <div class="faceted-search-filters-available-item-select-input-wrapper hide">
+                      <input class="faceted-search-filters-available-item-select-input visually-hidden" type="checkbox" value="IngExcl" data-variant="" tabindex="-1" checked="">
+                      <label class="faceted-search-filters-available-item-select-label option exclude-option" tabindex="-1">
+                        <span class="faceted-search-filters-available-item-select-label-inner"></span>
+                        <a class="filter-action close-icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Remove ingredient"><path fill="#FFF" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
+                  </a>
+                      </label>
+                    </div>
+                  </fieldset>
+              </div>
+            </div>
+        </div>
+      <div class="faceted-search-filters-update-results-wrapper">
+        <button type="submit" id="faceted-search-filters-update-results" class="faceted-search-filters-update-results elementButton__standard elementButton__contained" data-tracking-category="user action" data-tracking-label="filter bar interaction">
+          Show Results
+        </button>
+      </div>
+    </div>
+  </div>
+  </form>
+<div class="searchResults__contentContainer">
+  <div class="searchResults__top">
+    <span id="search-results-total-results" class="searchResults__totalResults elementFont__title" aria-live="assertive" aria-atomic="true">
+    55,395 Results
+    </span>
+  </div>
+<div role="list" class="searchResults__contentResultsWrapper grid-view " data-tracking-zone="search-results" data-page-size="24">
+    <span id="searchApiParams" data-search-api-params="%7B%22pageSize%22%3A24%2C%22sourceFilter%22%3A%5B%22alrcom%22%5D%2C%22docTypeFilter%22%3A%5B%22content-type-recipe%22%5D%2C%22orderBy%22%3A%22RelevanceRating%22%2C%22page%22%3A1%2C%22variantFilter%22%3A%5B%5D%7D"></span>
+    <span id="andFacetsWithResults" data-facets="%7B%22content_syndicated%22%3A%5B%22all%22%2C%22none%22%2C%22do-not-syndicate%22%2C%22unknown%22%5D%2C%22hasVideo%22%3A%5B%22true%22%5D%2C%22rating_ranges%22%3A%5B%22*-25.0%22%2C%2225.0-50.0%22%2C%2250.0-100.0%22%2C%22100.0-200.0%22%2C%22200.0-*%22%5D%7D"></span>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/218631/homemade-chili-in-a-can/" title="Homemade Chili in a Can" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070260.jpg" data-special-crop="" data-alt="Homemade Chili in a Can" data-title="Homemade Chili in a Can" data-shop-image="false" data-original-width="2576" data-original-height="1932" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070260.jpg" alt="Homemade Chili in a Can" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070260.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Homemade Chili in a Can" title="Homemade Chili in a Can" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Homemade Chili in a Can</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="2576" height="1932"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_218631" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Homemade Chili in a Can to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Homemade Chili in a Can" href="https://www.allrecipes.com/recipe/218631/homemade-chili-in-a-can/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Homemade Chili in a Can
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                9
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          This is a wonderful quick recipe that is hearty and filling! This recipe can easily be modified. I use 3 cans of beans because I love beans! You can also add water to make it more of a soup.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/3524362" title="More content by Abbie Jensen Whitton" data-tracking-content-headline="Homemade Chili in a Can" data-tracking-category="user action">
+                                <span class="card__authorName">Abbie Jensen Whitton</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/274524/creamy-cold-cucumber-soup-with-labneh/" title="Creamy Cold Cucumber Soup with Labneh" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6531231.jpg" data-special-crop="" data-alt="Creamy Cold Cucumber Soup with Labneh" data-title="Creamy Cold Cucumber Soup with Labneh" data-shop-image="false" data-original-width="4032" data-original-height="3024" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6531231.jpg" alt="Creamy Cold Cucumber Soup with Labneh" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6531231.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Creamy Cold Cucumber Soup with Labneh" title="Creamy Cold Cucumber Soup with Labneh" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Creamy Cold Cucumber Soup with Labneh</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="4032" height="3024"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_274524" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Creamy Cold Cucumber Soup with Labneh to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Creamy Cold Cucumber Soup with Labneh" href="https://www.allrecipes.com/recipe/274524/creamy-cold-cucumber-soup-with-labneh/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Creamy Cold Cucumber Soup with Labneh
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          I want to incorporate labneh into dishes more often. This soup is a great dish to have by itself or as an appetizer. It looks beautiful to serve and tastes excellent. It is also an effortless and refreshing dish for summer.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/25384027" title="More content by ServingsofYum" data-tracking-content-headline="Creamy Cold Cucumber Soup with Labneh" data-tracking-category="user action">
+                                <span class="card__authorName">ServingsofYum</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/263133/instant-pot-easy-vegan-cranberry-orange-chutney/" title="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5287328.jpg" data-special-crop="" data-alt="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" data-title="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" data-shop-image="false" data-original-width="4032" data-original-height="2556" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5287328.jpg" alt="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5287328.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" title="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="4032" height="2556"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_263133" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" href="https://www.allrecipes.com/recipe/263133/instant-pot-easy-vegan-cranberry-orange-chutney/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Instant Pot® Easy Vegan Cranberry Orange Chutney
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          The ultimate vegan cranberry orange chutney made easy in the Instant Pot®! This spiced chutney with ginger, cumin, and fennel would be a great addition to your Thanksgiving menu.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/fiorellasrecipes/" title="More content by Fioa" data-tracking-content-headline="Instant Pot&amp;reg; Easy Vegan Cranberry Orange Chutney" data-tracking-category="user action">
+                                <span class="card__authorName">Fioa</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+                <div id="div-gpt-mob-square-flex-1" data-tier="1" class="ad ad-container ad-wrapper type-300 mobile-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/247173/patriotic-smores/" title="Patriotic S'mores" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3566062.jpg" data-special-crop="" data-alt="Patriotic S'mores" data-title="Patriotic S'mores" data-shop-image="false" data-original-width="960" data-original-height="960" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3566062.jpg" alt="Patriotic S&#x27;mores" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3566062.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Patriotic S'mores" title="Patriotic S'mores" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Patriotic S'mores</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="960" height="960"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_247173" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Patriotic S'mores to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Patriotic S'mores" href="https://www.allrecipes.com/recipe/247173/patriotic-smores/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Patriotic S'mores
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          S'mores are an American summer tradition. Why not enjoy a red, white and blue one? Fresh berries bring sweet-tart flavor that pairs perfectly with the melty chocolate and gooey marshmallows.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/targettestkitchen/" title="More content by Target Test Kitchen" data-tracking-content-headline="Patriotic S'mores" data-tracking-category="user action">
+                                <span class="card__authorName">Target Test Kitchen</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+                    <div class="card__detailsContainer-right">
+                        <span class="card__sponsoredBy elementFont__fine">Sponsored By Target</span>
+
+                    </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/254727/toasts-with-double-blackberries/" title="Toasts with Double Blackberries" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3863211.jpg" data-special-crop="" data-alt="Toasts with Double Blackberries" data-title="Toasts with Double Blackberries" data-shop-image="false" data-original-width="960" data-original-height="960" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3863211.jpg" alt="Toasts with Double Blackberries" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3863211.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Toasts with Double Blackberries" title="Toasts with Double Blackberries" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Toasts with Double Blackberries</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="960" height="960"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_254727" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Toasts with Double Blackberries to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Toasts with Double Blackberries" href="https://www.allrecipes.com/recipe/254727/toasts-with-double-blackberries/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Toasts with Double Blackberries
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          For a quick breakfast or after-school snack, whole grain toast with blackberry yogurt, fresh blackberries and a dusting of cinnamon sugar is perfect.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/yoplait/" title="More content by Yoplait" data-tracking-content-headline="Toasts with Double Blackberries" data-tracking-category="user action">
+                                <span class="card__authorName">Yoplait</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+                    <div class="card__detailsContainer-right">
+                        <span class="card__sponsoredBy elementFont__fine">Sponsored By Yoplait</span>
+
+                    </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/258309/broiled-stone-fruit-with-cardamom-banana-soft-serve/" title="Broiled Stone Fruit with Cardamom Banana Soft Serve" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4520596.jpg" data-special-crop="" data-alt="Broiled Stone Fruit with Cardamom Banana Soft Serve" data-title="Broiled Stone Fruit with Cardamom Banana Soft Serve" data-shop-image="false" data-original-width="960" data-original-height="960" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4520596.jpg" alt="Broiled Stone Fruit with Cardamom Banana Soft Serve" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4520596.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Broiled Stone Fruit with Cardamom Banana Soft Serve" title="Broiled Stone Fruit with Cardamom Banana Soft Serve" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Broiled Stone Fruit with Cardamom Banana Soft Serve</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="960" height="960"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_258309" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Broiled Stone Fruit with Cardamom Banana Soft Serve to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Broiled Stone Fruit with Cardamom Banana Soft Serve" href="https://www.allrecipes.com/recipe/258309/broiled-stone-fruit-with-cardamom-banana-soft-serve/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Broiled Stone Fruit with Cardamom Banana Soft Serve
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Easy chai-inspired almondmilk soft serve with roasted stone fruit.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/almondbreeze/" title="More content by Almond Breeze" data-tracking-content-headline="Broiled Stone Fruit with Cardamom Banana Soft Serve" data-tracking-category="user action">
+                                <span class="card__authorName">Almond Breeze</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+                    <div class="card__detailsContainer-right">
+                        <span class="card__sponsoredBy elementFont__fine">Sponsored By Almond Breeze</span>
+
+                    </div>
+
+
+                </div>
+
+              </div>
+
+               <div class="div-sm-inStream mobile-ad"></div>
+            <div class="category-page-list-related-aside sister-ads">
+
+                  <div id="div-gpt-square-fixed-1" data-tier="1" class="ad ad-container ad-wrapper type-300 tablet-ad desktop-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+                  <div id="div-gpt-square-fixed-2" data-tier="2" class="ad ad-container ad-wrapper type-300 tablet-ad desktop-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+            </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/280976/grilled-old-bay-corn-on-the-cob/" title="Grilled Old Bay&amp;reg; Corn on the Cob" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8346539.jpg" data-special-crop="" data-alt="Grilled Old Bay&amp;reg; Corn on the Cob" data-title="Grilled Old Bay&amp;reg; Corn on the Cob" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8346539.jpg" alt="Grilled Old Bay&amp;reg; Corn on the Cob" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8346539.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Grilled Old Bay&amp;reg; Corn on the Cob" title="Grilled Old Bay&amp;reg; Corn on the Cob" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Grilled Old Bay&amp;reg; Corn on the Cob</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_280976" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Grilled Old Bay&amp;reg; Corn on the Cob to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Grilled Old Bay&amp;reg; Corn on the Cob" href="https://www.allrecipes.com/recipe/280976/grilled-old-bay-corn-on-the-cob/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Grilled Old Bay® Corn on the Cob
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                1
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Mexican street corn is one of my favorite ways to eat corn but I wanted to try something different. I came up with this Cajun version by replacing lime with lemon, chili powder with Old Bay®, cotija with Parmesan, and cilantro with parsley.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/souplovingnicole" title="More content by Soup Loving Nicole" data-tracking-content-headline="Grilled Old Bay&amp;reg; Corn on the Cob" data-tracking-category="user action">
+                                <span class="card__authorName">Soup Loving Nicole</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/279952/crispy-crunchy-pumpkin-seeds/" title="Crispy, Crunchy Pumpkin Seeds" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F493535.jpg" data-special-crop="" data-alt="Crispy, Crunchy Pumpkin Seeds" data-title="Crispy, Crunchy Pumpkin Seeds" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F493535.jpg" alt="Crispy, Crunchy Pumpkin Seeds" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F493535.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Crispy, Crunchy Pumpkin Seeds" title="Crispy, Crunchy Pumpkin Seeds" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Crispy, Crunchy Pumpkin Seeds</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_279952" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Crispy, Crunchy Pumpkin Seeds to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Crispy, Crunchy Pumpkin Seeds" href="https://www.allrecipes.com/recipe/279952/crispy-crunchy-pumpkin-seeds/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Crispy, Crunchy Pumpkin Seeds
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          I made this recipe up the other day when baking my pie pumpkin up, and it's fantastic. The seeds have the perfect crunch, and are full of flavor. A yummy, easy snack. Definitely double and triple this recipe and enjoy with a group! Delicious.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/greysquirrel" title="More content by Leanna the Squirrel" data-tracking-content-headline="Crispy, Crunchy Pumpkin Seeds" data-tracking-category="user action">
+                                <span class="card__authorName">Leanna the Squirrel</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/270816/just-peachy-freezer-oatmeal-cups/" title="Just Peachy Freezer Oatmeal Cups" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6408208.jpg" data-special-crop="" data-alt="Just Peachy Freezer Oatmeal Cups" data-title="Just Peachy Freezer Oatmeal Cups" data-shop-image="false" data-original-width="3024" data-original-height="4032" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6408208.jpg" alt="Just Peachy Freezer Oatmeal Cups" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6408208.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Just Peachy Freezer Oatmeal Cups" title="Just Peachy Freezer Oatmeal Cups" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Just Peachy Freezer Oatmeal Cups</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="3024" height="4032"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_270816" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Just Peachy Freezer Oatmeal Cups to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Just Peachy Freezer Oatmeal Cups" href="https://www.allrecipes.com/recipe/270816/just-peachy-freezer-oatmeal-cups/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Just Peachy Freezer Oatmeal Cups
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          This is a versatile recipe which can be modified to suit your preferences. Frozen oatmeal can be transported from freezer to bowl for a hearty morning breakfast! I prefer using evaporated milk for extra creaminess, but you can use regular milk or a mixture of water and milk.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/thedailygourmet" title="More content by thedailygourmet" data-tracking-content-headline="Just Peachy Freezer Oatmeal Cups" data-tracking-category="user action">
+                                <span class="card__authorName">thedailygourmet</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+                <div id="div-gpt-mob-square-fixed-1" data-tier="2" class="ad ad-container ad-wrapper type-300 mobile-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/235699/edys-holiday-drumcake/" title="Edy's Holiday Drumcake" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070930.jpg" data-special-crop="" data-alt="Edy's Holiday Drumcake" data-title="Edy's Holiday Drumcake" data-shop-image="false" data-original-width="250" data-original-height="250" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070930.jpg" alt="Edy&#x27;s Holiday Drumcake" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1070930.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Edy's Holiday Drumcake" title="Edy's Holiday Drumcake" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Edy's Holiday Drumcake</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="250" height="250"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_235699" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Edy's Holiday Drumcake to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Edy's Holiday Drumcake" href="https://www.allrecipes.com/recipe/235699/edys-holiday-drumcake/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Edy's Holiday Drumcake
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                1
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Get a taste of holiday rhythm with this sweet snare. Each bite will have your tongue tapping along with its cool and tasty beat: Pa rum yum yum yum!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/edys/" title="More content by Edy's" data-tracking-content-headline="Edy's Holiday Drumcake" data-tracking-category="user action">
+                                <span class="card__authorName">Edy's</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/240107/kalenutsco/" title="Kalenutsco" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1959192.jpg" data-special-crop="" data-alt="Kalenutsco" data-title="Kalenutsco" data-shop-image="false" data-original-width="1918" data-original-height="1918" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1959192.jpg" alt="Kalenutsco" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1959192.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Kalenutsco" title="Kalenutsco" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Kalenutsco</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="1918" height="1918"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_240107" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Kalenutsco to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Kalenutsco" href="https://www.allrecipes.com/recipe/240107/kalenutsco/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Kalenutsco
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 3.5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.74l-7.19-.62L12 2.5 9.19 9.13 2 9.74l5.46 4.73-1.64 7.03L12 17.77l6.18 3.73-1.63-7.03L22 9.74zM12 15.9V6.6l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.9z"></path></g></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                2
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          I found this recipe in my house and made it, I liked for its sweet taste.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/8515995" title="More content by Edward Fine" data-tracking-content-headline="Kalenutsco" data-tracking-category="user action">
+                                <span class="card__authorName">Edward Fine</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/234990/corn-and-challah-stuffing-with-fried-sage/" title="Corn and Challah Stuffing with Fried Sage" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5566612.jpg" data-special-crop="" data-alt="Corn and Challah Stuffing with Fried Sage" data-title="Corn and Challah Stuffing with Fried Sage" data-shop-image="false" data-original-width="3264" data-original-height="2448" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5566612.jpg" alt="Corn and Challah Stuffing with Fried Sage" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5566612.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Corn and Challah Stuffing with Fried Sage" title="Corn and Challah Stuffing with Fried Sage" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Corn and Challah Stuffing with Fried Sage</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="3264" height="2448"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_234990" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Corn and Challah Stuffing with Fried Sage to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Corn and Challah Stuffing with Fried Sage" href="https://www.allrecipes.com/recipe/234990/corn-and-challah-stuffing-with-fried-sage/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Corn and Challah Stuffing with Fried Sage
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 4 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                1
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Using challah in stuffing is a family secret. The sweet bread and the sweet corn in this recipe has been a favorite of ours since childhood!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/10440121" title="More content by foodwinefashion" data-tracking-content-headline="Corn and Challah Stuffing with Fried Sage" data-tracking-category="user action">
+                                <span class="card__authorName">foodwinefashion</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+               <div class="div-sm-inStream tablet-ad desktop-ad"></div>
+
+                <div id="div-gpt-mob-square-fixed-2" data-tier="3" data-scroll-load="true" class="ad ad-container ad-wrapper type-300 mobile-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/273804/charred-corn-and-black-bean-salsa/" title="Charred Corn and Black Bean Salsa" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6800082.jpg" data-special-crop="" data-alt="Charred Corn and Black Bean Salsa" data-title="Charred Corn and Black Bean Salsa" data-shop-image="false" data-original-width="3648" data-original-height="2736" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6800082.jpg" alt="Charred Corn and Black Bean Salsa" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6800082.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Charred Corn and Black Bean Salsa" title="Charred Corn and Black Bean Salsa" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Charred Corn and Black Bean Salsa</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="3648" height="2736"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_273804" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Charred Corn and Black Bean Salsa to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Charred Corn and Black Bean Salsa" href="https://www.allrecipes.com/recipe/273804/charred-corn-and-black-bean-salsa/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Charred Corn and Black Bean Salsa
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 4.5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.74l-7.19-.62L12 2.5 9.19 9.13 2 9.74l5.46 4.73-1.64 7.03L12 17.77l6.18 3.73-1.63-7.03L22 9.74zM12 15.9V6.6l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.9z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                2
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          This charred corn salsa came about when I wanted to make use of some leftover ingredients after making a Mexican dish the night before. Broiling a few of the ingredients up front and using fire-roasted tomatoes gives it a nice smoky flavor. The recipe as-is will yield a salsa on the spicier side of mild. Alter the spice level by increasing or decreasing chili powder to taste. Serve with chips or use in any recipe that calls for salsa.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/13623387" title="More content by Kate O'Neill" data-tracking-content-headline="Charred Corn and Black Bean Salsa" data-tracking-category="user action">
+                                <span class="card__authorName">Kate O'Neill</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/274463/pumpkin-cheesecake-streusel-bars/" title="Pumpkin Cheesecake Streusel Bars" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6986984.jpg" data-special-crop="" data-alt="Pumpkin Cheesecake Streusel Bars" data-title="Pumpkin Cheesecake Streusel Bars" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6986984.jpg" alt="Pumpkin Cheesecake Streusel Bars" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6986984.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Pumpkin Cheesecake Streusel Bars" title="Pumpkin Cheesecake Streusel Bars" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Pumpkin Cheesecake Streusel Bars</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_274463" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Pumpkin Cheesecake Streusel Bars to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Pumpkin Cheesecake Streusel Bars" href="https://www.allrecipes.com/recipe/274463/pumpkin-cheesecake-streusel-bars/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Pumpkin Cheesecake Streusel Bars
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 3 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                1
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          These are spicy, creamy, crumbly, pumpkin pie cheesecake bars.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/4446969" title="More content by kitchgirl" data-tracking-content-headline="Pumpkin Cheesecake Streusel Bars" data-tracking-category="user action">
+                                <span class="card__authorName">kitchgirl</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/274755/peppermint-candy-cane-kiss-cookies/" title="Peppermint Candy Cane Kiss Cookies" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F944873.jpg" data-special-crop="" data-alt="Peppermint Candy Cane Kiss Cookies" data-title="Peppermint Candy Cane Kiss Cookies" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F944873.jpg" alt="Peppermint Candy Cane Kiss Cookies" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F944873.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Peppermint Candy Cane Kiss Cookies" title="Peppermint Candy Cane Kiss Cookies" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Peppermint Candy Cane Kiss Cookies</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_274755" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Peppermint Candy Cane Kiss Cookies to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Peppermint Candy Cane Kiss Cookies" href="https://www.allrecipes.com/recipe/274755/peppermint-candy-cane-kiss-cookies/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Peppermint Candy Cane Kiss Cookies
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          I made this for my family and they all love it! The most important thing is to stick the cookies in the freezer right after putting the kisses on so that they don't melt into a puddle of chocolate. I learned the hard way! Sprinkle the dough before baking with crushed candy, if you like.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/10620771" title="More content by HannahB607" data-tracking-content-headline="Peppermint Candy Cane Kiss Cookies" data-tracking-category="user action">
+                                <span class="card__authorName">HannahB607</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+                <div id="div-gpt-mob-square-fixed-3" data-tier="4" data-scroll-load="true" class="ad ad-container ad-wrapper type-300 mobile-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/235160/pumpkin-pie-chatsworth-style/" title="Pumpkin Pie Chatsworth Style" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4136698.jpg" data-special-crop="" data-alt="Pumpkin Pie Chatsworth Style" data-title="Pumpkin Pie Chatsworth Style" data-shop-image="false" data-original-width="2947" data-original-height="2947" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4136698.jpg" alt="Pumpkin Pie Chatsworth Style" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4136698.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Pumpkin Pie Chatsworth Style" title="Pumpkin Pie Chatsworth Style" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Pumpkin Pie Chatsworth Style</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="2947" height="2947"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_235160" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Pumpkin Pie Chatsworth Style to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Pumpkin Pie Chatsworth Style" href="https://www.allrecipes.com/recipe/235160/pumpkin-pie-chatsworth-style/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Pumpkin Pie Chatsworth Style
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 4.5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.74l-7.19-.62L12 2.5 9.19 9.13 2 9.74l5.46 4.73-1.64 7.03L12 17.77l6.18 3.73-1.63-7.03L22 9.74zM12 15.9V6.6l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.9z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                4
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          This is homemade right from the pumpkin and truly delicious.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/summerpls" title="More content by Summerpls" data-tracking-content-headline="Pumpkin Pie Chatsworth Style" data-tracking-category="user action">
+                                <span class="card__authorName">Summerpls</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/220944/buds-easy-buttercream-pound-cake/" title="Bud's Easy Buttercream Pound Cake" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F872346.jpg" data-special-crop="" data-alt="Bud's Easy Buttercream Pound Cake" data-title="Bud's Easy Buttercream Pound Cake" data-shop-image="false" data-original-width="4320" data-original-height="3240" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F872346.jpg" alt="Bud&#x27;s Easy Buttercream Pound Cake" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F872346.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Bud's Easy Buttercream Pound Cake" title="Bud's Easy Buttercream Pound Cake" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Bud's Easy Buttercream Pound Cake</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="4320" height="3240"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_220944" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Bud's Easy Buttercream Pound Cake to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Bud's Easy Buttercream Pound Cake" href="https://www.allrecipes.com/recipe/220944/buds-easy-buttercream-pound-cake/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Bud's Easy Buttercream Pound Cake
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 3 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                            <span class="rating-star" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                1
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Perfect for an Easter dessert!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/3907043" title="More content by Bud" data-tracking-content-headline="Bud's Easy Buttercream Pound Cake" data-tracking-category="user action">
+                                <span class="card__authorName">Bud</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/285042/strawberry-basil-hard-seltzer/" title="Strawberry-Basil Hard Seltzer" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg" data-special-crop="" data-alt="Strawberry-Basil Hard Seltzer" data-title="Strawberry-Basil Hard Seltzer" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg" alt="Strawberry-Basil Hard Seltzer" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Strawberry-Basil Hard Seltzer" title="Strawberry-Basil Hard Seltzer" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Strawberry-Basil Hard Seltzer</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_285042" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Strawberry-Basil Hard Seltzer to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Strawberry-Basil Hard Seltzer" href="https://www.allrecipes.com/recipe/285042/strawberry-basil-hard-seltzer/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Strawberry-Basil Hard Seltzer
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Making your own hard seltzer is super easy, and you can tailor it to your favorite flavors for a refreshing summertime drink. For extra flavor, muddle the strawberries, basil, and vodka ahead of time and let sit. When ready to use, add in the ice, shake, and strain!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/francecevallos" title="More content by France C" data-tracking-content-headline="Strawberry-Basil Hard Seltzer" data-tracking-category="user action">
+                                <span class="card__authorName">France C</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+            <div class="category-page-list-related-aside sister-ads">
+
+                  <div id="div-gpt-square-fixed-3" data-tier="3" class="ad ad-container ad-wrapper type-300 tablet-ad desktop-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+
+                  <div id="div-gpt-square-fixed-4" data-tier="4" class="ad ad-container ad-wrapper type-300 tablet-ad desktop-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1"></div>
+            </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/284169/vegan-panna-cotta-with-strawberry-rhubarb/" title="Vegan Panna Cotta with Strawberry Rhubarb" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9296981.jpg" data-special-crop="" data-alt="Vegan Panna Cotta with Strawberry Rhubarb" data-title="Vegan Panna Cotta with Strawberry Rhubarb" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9296981.jpg" alt="Vegan Panna Cotta with Strawberry Rhubarb" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9296981.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Vegan Panna Cotta with Strawberry Rhubarb" title="Vegan Panna Cotta with Strawberry Rhubarb" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Vegan Panna Cotta with Strawberry Rhubarb</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_284169" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Vegan Panna Cotta with Strawberry Rhubarb to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Vegan Panna Cotta with Strawberry Rhubarb" href="https://www.allrecipes.com/recipe/284169/vegan-panna-cotta-with-strawberry-rhubarb/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Vegan Panna Cotta with Strawberry Rhubarb
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          A plant-based version of the Italian custard-like dessert topped with a tart strawberry and rhubarb sauce.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/melaniegiovenzana" title="More content by Buckwheat Queen" data-tracking-content-headline="Vegan Panna Cotta with Strawberry Rhubarb" data-tracking-category="user action">
+                                <span class="card__authorName">Buckwheat Queen</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/247394/fancy-pants-pretzel-pizzas/" title="Fancy Pants Pretzel Pizzas" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3682804.jpg" data-special-crop="" data-alt="Fancy Pants Pretzel Pizzas" data-title="Fancy Pants Pretzel Pizzas" data-shop-image="false" data-original-width="960" data-original-height="960" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3682804.jpg" alt="Fancy Pants Pretzel Pizzas" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3682804.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Fancy Pants Pretzel Pizzas" title="Fancy Pants Pretzel Pizzas" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Fancy Pants Pretzel Pizzas</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="960" height="960"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_247394" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Fancy Pants Pretzel Pizzas to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Fancy Pants Pretzel Pizzas" href="https://www.allrecipes.com/recipe/247394/fancy-pants-pretzel-pizzas/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Fancy Pants Pretzel Pizzas
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          Kick up your Pretzel Crisps® by turning them into perfect little healthy pizza bites! Topped with a mixture of cheese and chicken sausage and carefully wrapped in chives these are sure to impress.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <span class="card__authorName elementFont__details--bold">Elizabeth</span>
+                          </div>
+
+
+
+                  </div>
+
+                    <div class="card__detailsContainer-right">
+                        <span class="card__sponsoredBy elementFont__fine">Sponsored By Snack Factory</span>
+
+                    </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/268297/christmas-tree-cookie-stack/" title="Christmas Tree Cookie Stack" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5821005.jpg" data-special-crop="" data-alt="Christmas Tree Cookie Stack" data-title="Christmas Tree Cookie Stack" data-shop-image="false" data-original-width="2448" data-original-height="3264" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5821005.jpg" alt="Christmas Tree Cookie Stack" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5821005.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Christmas Tree Cookie Stack" title="Christmas Tree Cookie Stack" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Christmas Tree Cookie Stack</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="2448" height="3264"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_268297" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Christmas Tree Cookie Stack to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Christmas Tree Cookie Stack" href="https://www.allrecipes.com/recipe/268297/christmas-tree-cookie-stack/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Christmas Tree Cookie Stack
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          A cookie tree is a great centerpiece for your Christmas table. You can use my recipe or your favorite cut-out cookie recipe. All you need are star-shaped cookie cutters in different sizes.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <span class="card__authorName elementFont__details--bold">Loló</span>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/282121/pineapple-jack-o-lantern/" title="Pineapple Jack-O'-Lantern" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8675186.jpg" data-special-crop="" data-alt="Pineapple Jack-O'-Lantern" data-title="Pineapple Jack-O'-Lantern" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8675186.jpg" alt="Pineapple Jack-O&#x27;-Lantern" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8675186.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Pineapple Jack-O'-Lantern" title="Pineapple Jack-O'-Lantern" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Pineapple Jack-O'-Lantern</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_282121" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Pineapple Jack-O'-Lantern to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Pineapple Jack-O'-Lantern" href="https://www.allrecipes.com/recipe/282121/pineapple-jack-o-lantern/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Pineapple Jack-O'-Lantern
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          This technique uses one of my newest kitchen gadgets: a pineapple corer-slicer! While you can certainly remove the insides of the pineapple using a knife and spoon, this tool makes the job so incredibly easy! Serve the perfectly sliced pineapple after a delicious meal, and use the juice and bottom scraps in a smoothie!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/kimscookingnow" title="More content by Kim's Cooking Now" data-tracking-content-headline="Pineapple Jack-O'-Lantern" data-tracking-category="user action">
+                                <span class="card__authorName">Kim's Cooking Now</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/235268/potato-latkes-with-caramelized-pears-goat-cheese-and-sherry-vinegar-drizzle/" title="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1071564.jpg" data-special-crop="" data-alt="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" data-title="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" data-shop-image="false" data-original-width="3264" data-original-height="2448" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1071564.jpg" alt="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1071564.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" title="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="3264" height="2448"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_235268" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" href="https://www.allrecipes.com/recipe/235268/potato-latkes-with-caramelized-pears-goat-cheese-and-sherry-vinegar-drizzle/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle
+                          </h3>
+                        </a>
+
+
+
+
+                        <div class="card__ratingContainer">
+                          <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 4.5 stars</span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                            <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.74l-7.19-.62L12 2.5 9.19 9.13 2 9.74l5.46 4.73-1.64 7.03L12 17.77l6.18 3.73-1.63-7.03L22 9.74zM12 15.9V6.6l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.9z"></path></g></svg></span>
+                              <span class="ratings-count elementFont__details">
+                                2
+                              </span>
+                          </div>
+                        </div>
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          A total invention and totally scrumptious!
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/11216322" title="More content by Mark Dungey" data-tracking-content-headline="Potato Latkes with Caramelized Pears, Goat Cheese, and Sherry Vinegar Drizzle" data-tracking-category="user action">
+                                <span class="card__authorName">Mark Dungey</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+                <div class="card__imageContainer">
+                  <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/282281/meatless-meatballs-with-vegetable-sauce/" title="Meatless Meatballs with Vegetable Sauce" aria-hidden="true" tabindex="-1">
+
+                        <div class="component lazy-image lazy-image-udf aspect_1x1 cache-only align-default rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F11%2F16%2FIMG_20200924_123339_8-01-2000.jpeg" data-special-crop="" data-alt="Meatless Meatballs with Vegetable Sauce" data-title="IMG_20200924_123339_8-01" data-shop-image="false" data-original-width="1713" data-original-height="2000" data-high-density="false" data-crop-percentage="100" data-width="272" data-tracking-zone="image" data-orientation="default">
+                          <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F11%2F16%2FIMG_20200924_123339_8-01-2000.jpeg" alt="Meatless Meatballs with Vegetable Sauce" width="272"></noscript>
+                          <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F11%2F16%2FIMG_20200924_123339_8-01-2000.jpeg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Meatless Meatballs with Vegetable Sauce" title="IMG_20200924_123339_8-01" width="272" height="272">
+                        <span class="placeholderText visually-hidden">Meatless Meatballs with Vegetable Sauce</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="1713" height="2000"></div></div>
+
+
+                  </a>
+
+
+                    <div class="component favorite favorite__userApi initialized">
+                        <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this (opens in a new window)" title="Save Item" data-content-id="cms/onecms_posts_alrcom_282281" data-regsource="3908" data-context-action="Save" data-context-dek="Join now to save Meatless Meatballs with Vegetable Sauce to your account" data-login-url="/account/signin" data-login-return-action="user-api-save" data-tracking-do-not-follow="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        <span class="icon__text">Save</span></a></span>
+                    </div>
+
+                </div>
+
+                <div class="card__detailsContainer">
+                  <div class="card__detailsContainer-left">
+
+                        <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Meatless Meatballs with Vegetable Sauce" href="https://www.allrecipes.com/recipe/282281/meatless-meatballs-with-vegetable-sauce/">
+                          <h3 class="card__title elementFont__resetHeading">
+                            Meatless Meatballs with Vegetable Sauce
+                          </h3>
+                        </a>
+
+
+
+
+
+
+                        <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                          These moist meatballs made with Impossible™ burger (made from plants) are packed with flavor that comes from the garlic, ginger, and curry powder in the seasoning mix. Serve this over pasta, with rice or potatoes, or make them mini-sized to serve as appetizers when you have company over.
+                        </div>
+
+                          <div class="card__author margin-8-tb">
+                            <span class="card__authorNamePrefix elementFont__details">By</span>
+                              <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/uzosfoodlabs/" title="More content by Uzo Orimalade" data-tracking-content-headline="Meatless Meatballs with Vegetable Sauce" data-tracking-category="user action">
+                                <span class="card__authorName">Uzo Orimalade</span>
+                              </a>
+                          </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+                <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+      <div class="card__imageContainer">
+        <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/246913/super-cina-toast/" title="Super Cina-Toast" aria-hidden="true" tabindex="-1">
+
+              <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3497872.jpg" data-special-crop="" data-alt="Super Cina-Toast" data-title="Super Cina-Toast" data-shop-image="false" data-original-width="2974" data-original-height="2974" data-high-density="" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3497872.jpg" alt="Super Cina-Toast" width="272"></noscript>
+                <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3497872.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Super Cina-Toast" title="Super Cina-Toast" width="272" height="272">
+              <span class="placeholderText visually-hidden">Super Cina-Toast</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="2974" height="2974"></div></div>
+
+
+        </a>
+
+
+          <div class="component favorite favorite__userApi">
+              <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this" title="Save Item" data-content-id="cms/onecms_posts_alrcom_246913" data-context-action="Save" data-context-dek="Join now to save Super Cina-Toast to your account" data-login-return-action="user-api-save">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+              </a></span>
+          </div>
+
+      </div>
+
+      <div class="card__detailsContainer">
+        <div class="card__detailsContainer-left">
+
+              <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Super Cina-Toast" href="https://www.allrecipes.com/recipe/246913/super-cina-toast/">
+                <h3 class="card__title elementFont__resetHeading">
+                  Super Cina-Toast
+                </h3>
+              </a>
+
+
+
+
+              <div class="card__ratingContainer">
+                <div class="component recipe-ratings ">  <span class="review-star-text visually-hidden">Rating: 4 stars</span>
+                  <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                  <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                  <span class="rating-star active" aria-hidden="true" data-rating="3"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                  <span class="rating-star active" aria-hidden="true" data-rating="4"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></span>
+                  <span class="rating-star" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-opacity=".95"><path class="rating-star-filled" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"></path></g></svg></span>
+                    <span class="ratings-count elementFont__details">
+                      8
+                    </span>
+                </div>
+              </div>
+
+
+              <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                This is a yummy recipe handed down for many generations. Great for breakfast, dessert, or snack time!
+              </div>
+
+                <div class="card__author margin-8-tb">
+                  <span class="card__authorNamePrefix elementFont__details">By</span>
+                    <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/12664623" title="More content by Cupcake Angel" data-tracking-content-headline="Super Cina-Toast" data-tracking-category="user action">
+                      <span class="card__authorName">Cupcake Angel</span>
+                    </a>
+                </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+      <div class="card__imageContainer">
+        <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/277679/cranberry-arctic-freeze-pie/" title="Cranberry Arctic Freeze Pie" aria-hidden="true" tabindex="-1">
+
+              <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F7457266.jpg" data-special-crop="" data-alt="Cranberry Arctic Freeze Pie" data-title="Cranberry Arctic Freeze Pie" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F7457266.jpg" alt="Cranberry Arctic Freeze Pie" width="272"></noscript>
+                <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F7457266.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Cranberry Arctic Freeze Pie" title="Cranberry Arctic Freeze Pie" width="272" height="272">
+              <span class="placeholderText visually-hidden">Cranberry Arctic Freeze Pie</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+        </a>
+
+
+          <div class="component favorite favorite__userApi">
+              <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this" title="Save Item" data-content-id="cms/onecms_posts_alrcom_277679" data-context-action="Save" data-context-dek="Join now to save Cranberry Arctic Freeze Pie to your account" data-login-return-action="user-api-save">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+              </a></span>
+          </div>
+
+      </div>
+
+      <div class="card__detailsContainer">
+        <div class="card__detailsContainer-left">
+
+              <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Cranberry Arctic Freeze Pie" href="https://www.allrecipes.com/recipe/277679/cranberry-arctic-freeze-pie/">
+                <h3 class="card__title elementFont__resetHeading">
+                  Cranberry Arctic Freeze Pie
+                </h3>
+              </a>
+
+
+
+
+
+
+              <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                Every Christmas my Granna makes a dessert called arctic freeze. I thought it would be wonderful if transformed into a pie.
+              </div>
+
+                <div class="card__author margin-8-tb">
+                  <span class="card__authorNamePrefix elementFont__details">By</span>
+                    <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/thedailygourmet" title="More content by thedailygourmet" data-tracking-content-headline="Cranberry Arctic Freeze Pie" data-tracking-category="user action">
+                      <span class="card__authorName">thedailygourmet</span>
+                    </a>
+                </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <div class="component card card__recipe card__facetedSearchResult" role="listitem">
+      <div class="card__imageContainer">
+        <a class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom" href="https://www.allrecipes.com/recipe/285042/strawberry-basil-hard-seltzer/" title="Strawberry-Basil Hard Seltzer" aria-hidden="true" tabindex="-1">
+
+              <div class="component lazy-image lazy-image-udf aspect_1x1 rendered image-loaded" data-src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg" data-special-crop="" data-alt="Strawberry-Basil Hard Seltzer" data-title="Strawberry-Basil Hard Seltzer" data-shop-image="false" data-original-width="0" data-original-height="0" data-high-density="" data-crop-percentage="100" data-width="272" data-tracking-zone="image">
+                <noscript><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg" alt="Strawberry-Basil Hard Seltzer" width="272"></noscript>
+                <div class="inner-container js-inner-container"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9309758.jpg&amp;w=272&amp;h=272&amp;c=sc&amp;poi=face&amp;q=60" alt="Strawberry-Basil Hard Seltzer" title="Strawberry-Basil Hard Seltzer" width="272" height="272">
+              <span class="placeholderText visually-hidden">Strawberry-Basil Hard Seltzer</span>  </div><div class="lazy-image__loadingPlaceholder"><img class="loadingPlaceholder" alt="" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E"></div></div>
+
+
+        </a>
+
+
+          <div class="component favorite favorite__userApi">
+              <span class="icon icon-favorite default-icon" data-social-service="favorite" data-tracking-zone="save-heart"><a href="javascript:void(0);" class="display-block saveMe shareicon-favorite-link-tag shareicon-favorite-link shareicon-favorite-user-api embedded-auth-modal-trigger" aria-label="Save this" title="Save Item" data-content-id="cms/onecms_posts_alrcom_285042" data-context-action="Save" data-context-dek="Join now to save Strawberry-Basil Hard Seltzer to your account" data-login-return-action="user-api-save">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-share icon-share-favorite" width="36" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+              </a></span>
+          </div>
+
+      </div>
+
+      <div class="card__detailsContainer">
+        <div class="card__detailsContainer-left">
+
+              <a class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom" title="Strawberry-Basil Hard Seltzer" href="https://www.allrecipes.com/recipe/285042/strawberry-basil-hard-seltzer/">
+                <h3 class="card__title elementFont__resetHeading">
+                  Strawberry-Basil Hard Seltzer
+                </h3>
+              </a>
+
+
+
+
+
+
+              <div class="card__summary elementFont__details--paragraphWithin margin-8-tb">
+                Making your own hard seltzer is super easy, and you can tailor it to your favorite flavors for a refreshing summertime drink. For extra flavor, muddle the strawberries, basil, and vodka ahead of time and let sit. When ready to use, add in the ice, shake, and strain!
+              </div>
+
+                <div class="card__author margin-8-tb">
+                  <span class="card__authorNamePrefix elementFont__details">By</span>
+                    <a class="card__authorNameLink elementFont__details--bold elementFont__detailsLinkOnly--underlined" href="https://www.allrecipes.com/cook/francecevallos" title="More content by France C" data-tracking-content-headline="Strawberry-Basil Hard Seltzer" data-tracking-category="user action">
+                      <span class="card__authorName">France C</span>
+                    </a>
+                </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>

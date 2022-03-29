@@ -1,0 +1,42 @@
+<div class="container">
+<h1 class="text-center">Create a meal</h1>
+  <div class="row">
+
+    <div class="col-3"></div>
+
+    <div class="col-6">
+      <%= simple_form_for(@meal) do |f| %>
+        <div class=“mb-3”>
+          <%= f.input :title %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :description %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :category, collection: ["Starter", "Main course", "Dessert"] %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :quantity %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :price %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :date_time_start %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :date_time_end %>
+        </div>
+        <div class=“mb-3”>
+          <%= f.input :photo, as: :file %>
+        </div>
+        <div class=“mb-3”>
+        <%= f.submit "Create", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-3"></div>
+
+</div>
+</div>
