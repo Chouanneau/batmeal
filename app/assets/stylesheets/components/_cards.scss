@@ -1,0 +1,44 @@
+.card-product {
+  overflow: hidden;
+  height: 160px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  position: relative;
+}
+
+.card-product img {
+  height: 100%;
+  width: 160px;
+  object-fit: cover;
+  position: absolute;
+}
+
+.card-product .card-product-infos {
+  position: absolute;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position: absolute;
+}
+
+
+.card-product .meal-order img {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  margin-top: 120px;
+  margin-left: 374px;
+}
