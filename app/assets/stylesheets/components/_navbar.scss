@@ -1,6 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  border: 1px solid transparent;
+  position:sticky;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+h4 {
+  padding-right: 40px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +17,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  font-family: roboto;
+}
+
+.navbar-lewagon a {
+  text-decoration: none;
+}
+
+.navbar-lewagon .navbar-brand-name {
+  justify-content: center;
+  color: black;
+  margin-top: 1rem;
 }
