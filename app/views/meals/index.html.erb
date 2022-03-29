@@ -1,2 +1,10 @@
 <h1>Meals</h1>
 <h2>Meals in your area</h2>
+
+<%= simple_form_for(meal) do |f| %>
+  <!-- [...] -->
+  <li>
+    <%= f.input :photo, as: :file %>
+  </li>
+  <!-- [...] -->
+<% end %>
