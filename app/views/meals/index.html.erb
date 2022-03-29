@@ -1,2 +1,14 @@
-<h1>Meals</h1>
-<h2>Meals in your area</h2>
+
+<div class="col-8">
+  <div class="cards">
+    <% @meals.each do |ski| %>
+      <%= link_to meal_path(meal) do %>
+      <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path meal.photo.key, height: 600, crop: :fill %>')">
+        <div class="brand-on-card"><%= meal.brand %></div>
+        <div class="price-on-card"><%= meal.price %></div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
