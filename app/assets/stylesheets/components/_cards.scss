@@ -1,0 +1,58 @@
+.card-product {
+  overflow: hidden;
+  height: 160px;
+  background: rgb(236, 232, 232);
+  box-shadow: 0 0 25px #4A4A4A;
+  display: flex;
+  width: 430px;
+  margin-left: 12px;
+  border-radius: 15px;
+  border: solid 1px #4A4A4A;
+}
+
+.card-product img {
+  height: 100%;
+  width: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-product-infos {
+  position: relative;
+  margin-top: 0px;
+}
+
+.card-product h2 {
+  text-align: center;
+  padding: 5px;
+  border: solid 1px blue;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.card-product p {
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  border: solid 1px yellowgreen;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+}
+
+.card-product .pricing{
+  border: solid 1px rgb(205, 50, 184);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: large;
+}
+
+
+.card-product .meal-order img {
+  height: 36px;
+  width: 36px;
+  margin-right: 4px;
+}
