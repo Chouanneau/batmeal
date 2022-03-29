@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_29_080807) do
+ActiveRecord::Schema.define(version: 2022_03_29_083452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meals", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.float "price"
+    t.string "category"
+    t.integer "quantity"
+    t.datetime "date_time_start"
+    t.datetime "date_time_end"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ordered_meals", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "meal_id", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meal_id"], name: "index_ordered_meals_on_meal_id"
+    t.index ["order_id"], name: "index_ordered_meals_on_order_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.string "status"
@@ -21,6 +43,17 @@ ActiveRecord::Schema.define(version: 2022_03_29_080807) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.bigint "cook_id"
+    t.bigint "customer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cook_id"], name: "index_reviews_on_cook_id"
+    t.index ["customer_id"], name: "index_reviews_on_customer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,5 +79,9 @@ ActiveRecord::Schema.define(version: 2022_03_29_080807) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "ordered_meals", "meals"
+  add_foreign_key "ordered_meals", "orders"
   add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "users", column: "cook_id"
+  add_foreign_key "reviews", "users", column: "customer_id"
 end
