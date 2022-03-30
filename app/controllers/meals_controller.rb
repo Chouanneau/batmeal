@@ -35,6 +35,12 @@ class MealsController < ApplicationController
     @meals = Meal.where(user: current_user)
   end
 
+  def destroy
+    @meal = Meal.find(params[:id])
+    @meal.destroy
+    redirect_to my_meals_path
+  end
+
   private
 
   def meal_params
