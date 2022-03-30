@@ -35,14 +35,6 @@ class MealsController < ApplicationController
     @meals = Meal.where(user: current_user)
   end
 
-  def edit
-  end
-
-  def update
-    @meal.update(meal_params)
-    redirect_to flat_path(@flat)
-  end
-
   def destroy
     @meal = Meal.find(params[:id])
     @meal.destroy
