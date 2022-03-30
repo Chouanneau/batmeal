@@ -11,10 +11,7 @@
         <h2>Pad thaï au poulet</h2>
         <p>Délicieux plat tradtionnel thaïlandais au gingembre, citron vert et poulet.</p>
 
-        <div class="pricing">
-          <h4>CHF 6.99 <%= link_to "#MEALSHOW", class: "meal-order" do %> </h4>
-          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
-          <% end %>
+       <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @meal.photo.key, height: 600, crop: :fill %>')">
         </div>
 
     </div>
