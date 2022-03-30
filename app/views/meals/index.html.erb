@@ -11,11 +11,13 @@
           <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
           <div class="card-product-infos">
             <h2><%= meal.title %></h2>
-            <p><%= meal.description %></p>
-            <div class="pricing">
-              <h5><%= meal.quantity %>   CHF <%= meal.price %><%= link_to "#MEALSHOW", class: "meal-order" do %> </h5>
-              <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
-              <% end %>
+            <p><%= meal.description %>...</p>
+            <div class="meal-infos">
+              <div class="quantity"><%= meal.quantity %> left</div>
+              <div class="price">CHF <%= meal.price %></div>
+              <%= link_to "#MEALSHOW", class: "meal-order" do %>
+                <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+                <% end %>
             </div>
           </div>
         </div>
