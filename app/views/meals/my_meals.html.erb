@@ -6,6 +6,7 @@
       <h3><%= meal.title %></h3>
       <p><%= meal.description %></p>
       <p><%= meal.price %></p>
+      <p><%= link_to "Delete", meal_path(meal), method: :delete, data: { confirm: "Are you sure?" } %></p>
     <% end %>
   </li>
 </ul>
