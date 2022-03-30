@@ -13,6 +13,8 @@
   border-radius: 12px;
   position: sticky;
   top: 20px;
+  box-shadow: 0 0 25px #4A4A4A;
+  border: solid 1px #4A4A4A;
   }
 }
 
@@ -43,7 +45,7 @@
 }
 
 .card-product h2 {
-  text-align: center;
+  text-align: left;
   overflow: hidden;
   justify-content: center;
   padding: 5px;
@@ -56,7 +58,7 @@
 .card-product p {
   margin-bottom: 6px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   padding: 5px;
   height: 56px;
   width: 100%;
