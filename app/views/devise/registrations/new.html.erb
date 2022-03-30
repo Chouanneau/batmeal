@@ -4,6 +4,18 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name, required: true, autofocus: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :username, required: true %>
+    <%= f.input :first_name, required: true %>
+    <%= f.input :address_street, required: true %>
+    <%= f.input :address_street_number, required: true %>
+    <%= f.input :city, required: true %>
+    <%= f.input :zipcode, required: true %>
+    <%= f.input :country, required: true, as: :text %>
+    <%= f.input :phone_number, required: true %>
+    <%= f.input :zipcode, required: true %>
+
     <%= f.input :email,
                 required: true,
                 autofocus: true,
