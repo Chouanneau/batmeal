@@ -60,11 +60,13 @@ doc.search('.card__recipe').each do |element|
     price: rand(3..10),
     category: categories.sample,
     date_time_start: Time.now,
-    date_time_end: Date.tomorrow.in_time_zone.change(hour: 12)
+    date_time_end: Date.tomorrow.in_time_zone.change(hour: 12),
+    user: User.all.sample
 
     # availability: true
-  )
-
+    )
+    meal.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
+    meal.save!
 end
 #   ski.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
 #   # article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
