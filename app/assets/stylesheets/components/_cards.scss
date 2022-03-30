@@ -1,3 +1,18 @@
+.list-meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}
+
+.map-users {
+  width: 660px;
+  margin-left: 48px;
+  position: sticky;
+  top: 20px;
+}
+
 .card-product {
   overflow: hidden;
   height: 160px;
@@ -6,6 +21,7 @@
   display: flex;
   width: 360px;
   margin-left: 12px;
+  margin-bottom: 12px;
   border-radius: 15px;
   border: solid 1px #4A4A4A;
 }
