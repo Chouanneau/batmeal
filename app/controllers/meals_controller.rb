@@ -1,7 +1,15 @@
 class MealsController < ApplicationController
   def index
-    @meals = Meal.all
     @users = User.all
+    if params[:query].present?
+      sql_query = " \
+        meals.title ILIKE :query \
+        OR meals.description ILIKE :query \
+      "
+      @meals = Meal.all.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @meals = Meal.all
+    end
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,

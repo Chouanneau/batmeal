@@ -2,23 +2,6 @@
 <a class="btn btn-ghost" href="#">Closest to you</a>
 
 
-
-<div class="cards">
-          <% @meals.each do |meal| %>
-          <ul>
-          <li>
-            <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path meal.photo.key, height: 100, crop: :fill %>')">
-
-            </div>
-          </li>
-          </ul>
-
-
-          <% end %>
-</div>
-
-
-
 <div class="row">
 
   <div class="col-6">

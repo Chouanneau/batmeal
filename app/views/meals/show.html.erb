@@ -3,6 +3,7 @@
 <div class="row">
 
   <div class="col-6">
+
     <div class="card-cook">
       <img src="https://assets.caisy.io/assets/c5b98fcc-5e23-4df0-a5cd-2a7527d26cff/auOkRmCA7i/e697978e-fefc-40b7-96bc-2d6e08655cadd75a8d1fff3e49f7aea027be33306018edbf286bc1124d7d801445e04a2555d50150102V8Zarge009.jpg?w=1536&h=864" />
       <div class="card-cook-infos">
@@ -17,23 +18,67 @@
       </div>
     </div>
 
-    <div class="list-meals-cook">
-
-        <div class="card-product-selected">
-          <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
-          <div class="card-product-selected-infos">
-            <h2><%= @meal.title %></h2>
-            <div class="meal-infos"><%= @meal.description %>
-            <div class="quantity"><%= @meal.quantity %> left</div>
-            <div class="price">CHF <%= @meal.price %></div>
-              <%= link_to meal_path(@meal), class: "meal-order" do %>
-              <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
-            <% end %>
-            </div>
-          </div>
+    <div class="card-product-selected">
+      <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+      <div class="card-product-selected-infos">
+        <div class="title"><%= @meal.title %></div>
+        <div class="description"><%= @meal.description %></div>
+        <div class="quantity"><%= @meal.quantity %> left</div>
+        <div class="price">CHF <%= @meal.price %></div>
+        <div class="add-button">
+          <%= link_to meal_path(@meal) do %>
+          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+          <% end %>
         </div>
-
+      </div>
     </div>
+
+    <div class="card-product-selected">
+      <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+      <div class="card-product-selected-infos">
+        <div class="title"><%= @meal.title %></div>
+        <div class="description"><%= @meal.description %></div>
+        <div class="quantity"><%= @meal.quantity %> left</div>
+        <div class="price">CHF <%= @meal.price %></div>
+        <div class="add-button">
+          <%= link_to meal_path(@meal) do %>
+          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-product-selected">
+      <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+      <div class="card-product-selected-infos">
+        <div class="title"><%= @meal.title %></div>
+        <div class="description"><%= @meal.description %></div>
+        <div class="quantity"><%= @meal.quantity %> left</div>
+        <div class="price">CHF <%= @meal.price %></div>
+        <div class="add-button">
+          <%= link_to meal_path(@meal) do %>
+          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-product-selected">
+      <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+      <div class="card-product-selected-infos">
+        <div class="title"><%= @meal.title %></div>
+        <div class="description"><%= @meal.description %></div>
+        <div class="quantity"><%= @meal.quantity %> left</div>
+        <div class="price">CHF <%= @meal.price %></div>
+        <div class="add-button">
+          <%= link_to meal_path(@meal) do %>
+          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 
