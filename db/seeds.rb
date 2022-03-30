@@ -61,7 +61,8 @@ doc.search('.card__recipe').each do |element|
     category: categories.sample,
     date_time_start: Time.now,
     date_time_end: Date.tomorrow.in_time_zone.change(hour: 12),
-    user: User.all.sample
+    user: User.where(is_cook: true).sample
+
 
     # availability: true
     )
