@@ -41,8 +41,8 @@ user8 = User.create!(username: "antoine", first_name: "Antoine", last_name:"Kirs
 
 categories = ["starter", "main course", "desert", "drink"]
 doc.search('.card__recipe').each do |element|
-  title = element.search('.placeholderText visually-hidden').text.strip
-  description = element.search('card__summary elementFont__details--paragraphWithin margin-8-tb').text.strip
+  title = element.search('.card__title').text.strip
+  description = element.search('.card__summary').text.strip
   # byebug
 
   photo_url = element.search('.inner-container img').attribute('src').value
@@ -53,18 +53,21 @@ doc.search('.card__recipe').each do |element|
   end
 
 
-  meal = Meal.new(
+  meal = Meal.create!(
     title: title,
     description: description,
     quantity: rand(1..3),
     price: rand(3..10),
     category: categories.sample,
     date_time_start: Time.now,
-    date_time_end: Date.tomorrow.in_time_zone.change(hour: 12)
+    date_time_end: Date.tomorrow.in_time_zone.change(hour: 12),
+    user: User.where(is_cook: true).sample
+
 
     # availability: true
-  )
-  meal.save!
+    )
+    meal.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
+    meal.save!
 end
 #   ski.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
 #   # article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
