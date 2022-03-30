@@ -18,8 +18,37 @@
 </div>
 
 
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+
+<div class="row">
+
+  <div class="col-6">
+    <div class="list-meals">
+
+      <% @meals.each do |meal| %>
+        <div class="card-product">
+          <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+          <div class="card-product-infos">
+            <h2><%= meal.title %></h2>
+            <p><%= meal.description %>...</p>
+            <div class="meal-infos">
+              <div class="quantity"><%= meal.quantity %> left</div>
+              <div class="price">CHF <%= meal.price %></div>
+              <%= link_to meal_path(meal), class: "meal-order" do %>
+                <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+                <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="col-6 map-users">
+    <div style="height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 </div>

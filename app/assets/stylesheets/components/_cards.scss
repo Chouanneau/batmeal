@@ -1,3 +1,23 @@
+.list-meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}
+
+.map-users {
+  width: 660px;
+  margin-left: 48px;
+  .mapboxgl-map {
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 0 25px #4A4A4A;
+  border: solid 1px #4A4A4A;
+  }
+}
+
 .card-product {
   overflow: hidden;
   height: 160px;
@@ -6,6 +26,7 @@
   display: flex;
   width: 360px;
   margin-left: 12px;
+  margin-bottom: 12px;
   border-radius: 15px;
   border: solid 1px #4A4A4A;
 }
@@ -24,34 +45,51 @@
 }
 
 .card-product h2 {
-  text-align: center;
+  text-align: left;
+  overflow: hidden;
+  justify-content: center;
   padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   width: 100%;
+  height: 40px;
 }
 
 .card-product p {
-  text-align: center;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-align: left;
   padding: 5px;
-  height: 54px;
+  height: 56px;
   width: 100%;
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
 }
 
-.card-product .pricing {
+.card-product .meal-infos {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: large;
+  position: relative;
+  margin-bottom: 0px;
+  font-size: 16px;
+  height: 40px;
 }
 
+.card-product .meal-infos .quantity {
+  position: absolute;
+  margin-left: 6px;
+}
+
+.card-product .meal-infos .price {
+  position: absolute;
+  margin-top:18px;
+  margin-left: 6px;
+}
 
 .card-product .meal-order img {
+  position: absolute;
+  padding: 2px;
+  margin-left: 140px;
   height: 36px;
   width: 36px;
-  margin-right: 4px;
-  margin-bottom: 4px;
 }

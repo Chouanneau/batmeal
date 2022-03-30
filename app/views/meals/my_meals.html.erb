@@ -1,1 +1,11 @@
-<h1>my meals</h1>
+<h1>My meals</h1>
+
+<ul>
+  <li>
+    <% @meals.each do |meal| %>
+      <h3><%= meal.title %></h3>
+      <p><%= meal.description %></p>
+      <p><%= meal.price %></p>
+    <% end %>
+  </li>
+</ul>
