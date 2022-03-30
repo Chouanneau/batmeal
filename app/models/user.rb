@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :reviews
   has_many_attached :photo
 
-  # geocoded_by :address_street_number, :address_street, :city, :zipcode, :country
-  after_validation :geocode, if: :will_save_change_to_address?
+  geocoded_by :full_address
+  after_validation :geocode
+
+  def full_address
+    "#{self.address_street_number} #{self.address_street}, #{self.city}, #{self.zipcode}, #{self.country}"
+  end
 end

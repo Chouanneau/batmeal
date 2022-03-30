@@ -59,7 +59,7 @@ doc.search('.card__recipe').each do |element|
     quantity: rand(1..3),
     price: rand(3..10),
     category: categories.sample,
-    date_time_start: Time.now
+    date_time_start: Time.now,
     date_time_end: Date.tomorrow.in_time_zone.change(hour: 12)
 
     # availability: true

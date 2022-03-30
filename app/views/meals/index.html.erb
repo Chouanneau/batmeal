@@ -21,17 +21,8 @@
   </div>
 
 
-<!--
-<div class="col-8">
-  <div class="cards">
-    <% @meals.each do |ski| %>
-      <%= link_to meal_path(meal) do %>
-      <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path meal.photo.key, height: 600, crop: :fill %>')">
-        <div class="brand-on-card"><%= meal.brand %></div>
-        <div class="price-on-card"><%= meal.price %></div>
-      </div>
-      <% end %>
-    <% end %>
-  </div>
+<div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['pk.eyJ1IjoiYnJvZWhyaWciLCJhIjoiY2wwZnV3aXkwMHdzZzNsbzZycjJ2cTZseCJ9.mbuJmIbre32wyN5TSKCRAQ'] %>">
 </div>
--->
