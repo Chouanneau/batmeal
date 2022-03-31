@@ -1,12 +1,50 @@
-<h1>My meals</h1>
+<h1>Cook space - list of meals</h1>
 
-<ul>
-  <li>
-    <% @meals.each do |meal| %>
-      <h3><%= meal.title %></h3>
-      <p><%= meal.description %></p>
-      <p><%= meal.price %></p>
-      <p><%= link_to "Delete", meal_path(meal), method: :delete, data: { confirm: "Are you sure?" } %></p>
-    <% end %>
-  </li>
-</ul>
+<a class="btn btn-ghost" href="#">Create a new meal</a>
+
+<div class="row">
+
+  <div class="col-6">
+
+    <div class="card-cook">
+      <img src="https://assets.caisy.io/assets/c5b98fcc-5e23-4df0-a5cd-2a7527d26cff/auOkRmCA7i/e697978e-fefc-40b7-96bc-2d6e08655cadd75a8d1fff3e49f7aea027be33306018edbf286bc1124d7d801445e04a2555d50150102V8Zarge009.jpg?w=1536&h=864" />
+      <div class="card-cook-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Hello! I am Italian and I developped a passion about cooking sonce I was little.</p>
+          <p>As I am cooking for my husband and my 3 kids, I can also cook for you! </p>
+          <p>I make delicious pastas, arrancinis and a lot more...</p>
+        </div>
+        <h2 class="card-cook-opening">Opens at - Closes at</h2>
+        <img class="card-cook-user avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+      </div>
+    </div>
+
+      <% @meals.each do |meal| %>
+        <div class="card-product-selected">
+          <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+          <div class="card-product-selected-infos">
+            <div class="title"><%= meal.title %></div>
+            <div class="description"><%= meal.description %>...</div>
+            <div class="quantity"><%= meal.quantity %> left</div>
+            <div class="price">CHF <%= meal.price %></div>
+            <div class="delete-button">
+              <%= link_to image_tag("https://pngset.com/images/trash-garbage-recycle-bin-trash-bin-icon-stencil-symbol-logo-trademark-transparent-png-967562.png"), meal_path(meal), method: :delete, data: { confirm: "Are you sure?" } %>
+              <%=  %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+
+
+  <div class="col-6 map-users">
+    <div style="height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+</div>
