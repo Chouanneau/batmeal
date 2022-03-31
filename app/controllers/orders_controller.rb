@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  def ordered_meal
+  def
 
   end
 end
