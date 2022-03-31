@@ -1,4 +1,4 @@
-<h1>Cook space - list of meals</h1>
+<h1>Welcome to your Cook page</h1>
 
 <a class="btn btn-ghost" href="/meals/new">Create a new meal</a>
 
@@ -30,7 +30,9 @@
             <div class="price">CHF <%= meal.price %></div>
             <div class="delete-button">
               <%= link_to image_tag("https://pngset.com/images/trash-garbage-recycle-bin-trash-bin-icon-stencil-symbol-logo-trademark-transparent-png-967562.png"), meal_path(meal), method: :delete, data: { confirm: "Are you sure?" } %>
-              <%= link_to 'Edit', edit_meal_path(meal), class: 'ms-3 text-warning' %>
+            </div>
+            <div class="edit-button">
+              <%= link_to image_tag("https://icons.veryicon.com/png/o/education-technology/onemind/edit-97.png"), edit_meal_path(meal), method: :edit %>
             </div>
           </div>
         </div>
