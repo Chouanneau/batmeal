@@ -4,23 +4,6 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%# <select name=":user_role">
-      <option>Devenir client</option>
-      <option>Devenir cook</option>
-    </select> %>
-    <%= f.label :role %>
-    <%= f.select :role, User.roles.keys %>
-    <%= f.input :first_name, required: true, autofocus: true %>
-    <%= f.input :last_name, required: true %>
-    <%= f.input :username, required: true %>
-    <%= f.input :address_street, required: true %>
-    <%= f.input :address_street_number, required: true %>
-    <%= f.input :city, required: true %>
-    <%= f.input :zipcode, required: true %>
-    <%= f.input :country, required: true, as: :text %>
-    <%= f.input :phone_number, required: true %>
-    <%= f.input :zipcode, required: true %>
-
     <%= f.input :email,
                 required: true,
                 autofocus: true,

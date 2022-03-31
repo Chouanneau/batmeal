@@ -39,6 +39,15 @@ class MealsController < ApplicationController
     end
   end
 
+  def edit
+    # @meal = Meal.find(params[:id])
+  end
+
+  def update
+    @meal.update(meal_params)
+    redirect_to my_meals_path(@meal)
+  end
+
   def my_meals
     @meals = Meal.where(user: current_user)
   end
