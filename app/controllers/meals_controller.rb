@@ -1,7 +1,7 @@
 class MealsController < ApplicationController
   def index
     @users = User.all
-    if params[:search][:query].present?
+    if params[:search].present?
       sql_query = " \
         meals.title ILIKE :query \
         OR meals.description ILIKE :query \

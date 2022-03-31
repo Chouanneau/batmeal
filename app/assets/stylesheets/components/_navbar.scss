@@ -1,9 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  border: 1px solid transparent;
+  border: 1px solid;
   position:sticky;
-  top: 2px;
+  top:0;
+  z-index: 100;
   background-color: white;
   transition: 0.5s background-color ease;
   border-bottom: 1px solid gray;

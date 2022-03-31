@@ -8,13 +8,11 @@
 
 .map-users {
   width: 660px;
-  margin-left: 48px;
+  margin-left: 24px;
   .mapboxgl-map {
   border-radius: 12px;
   position: sticky;
-  top: 20px;
-  box-shadow: 0 0 25px #4A4A4A;
-  border: solid 1px #4A4A4A;
+  top: 100px;
   }
 }
 
@@ -22,13 +20,11 @@
   overflow: hidden;
   height: 160px;
   background: rgb(236, 232, 232);
-  box-shadow: 0 0 25px #4A4A4A;
   display: flex;
   width: 360px;
   margin-left: 12px;
   margin-bottom: 12px;
   border-radius: 15px;
-  border: solid 1px #4A4A4A;
 }
 
 .card-product img {

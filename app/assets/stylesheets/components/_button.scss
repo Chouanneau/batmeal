@@ -13,3 +13,29 @@
 .btn-ghost:hover {
   opacity: 1;
 }
+
+.btn-search {
+  display: flex;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  width: 140px;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 6px;
+  margin-bottom: 16px;
+}
+
+.btn-search a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-search:hover {
+  opacity: 1;
+}
