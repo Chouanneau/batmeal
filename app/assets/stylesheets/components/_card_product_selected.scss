@@ -7,6 +7,7 @@
   margin-left: 12px;
   margin-bottom: 12px;
   border-radius: 15px;
+  border: solid 1px red;
 }
 
 .card-product-selected > img {
@@ -14,6 +15,7 @@
   width: 160px;
   object-fit: cover;
   border-radius: 15px;
+  border: solid 1px red;
 }
 
 .card-product-selected .card-product-selected-infos {
@@ -25,6 +27,7 @@
     margin-left: 6px;
     margin-top: 1px;
     font-weight: bolder;
+    border: solid 1px red;
   }
 
   .description {
@@ -32,6 +35,7 @@
     font-size: 12px;
     margin-left: 6px;
     margin-top: 2px;
+    border: solid 1px red;
   }
 
   .quantity {
@@ -40,6 +44,7 @@
     margin-left: 6px;
     margin-top: 2px;
     font-weight: bold;
+    border: solid 1px red;
   }
 
   .price {
@@ -47,9 +52,11 @@
     font-size: 18px;
     margin-left: 6px;
     margin-top: 2px;
+    border: solid 1px red;
   }
 
   .add-button {
+    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
@@ -60,6 +67,7 @@
   }
 
   .delete-button {
+    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
@@ -70,6 +78,7 @@
   }
 
   .edit-button {
+    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
