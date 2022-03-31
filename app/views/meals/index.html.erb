@@ -9,9 +9,9 @@
 
       <% @meals.each do |meal| %>
         <div class="card-product">
-          <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+          <%= link_to image_tag("https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg"), meal_path(meal) %>
           <div class="card-product-infos">
-            <h2><%= meal.title %></h2>
+            <h2><%= link_to meal.title, meal_path(meal) %></h2>
             <p><%= meal.description %>...</p>
             <div class="meal-infos">
               <div class="quantity"><%= meal.quantity %> left</div>

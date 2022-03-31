@@ -7,15 +7,18 @@
   margin-left: 12px;
   margin-bottom: 12px;
   border-radius: 15px;
-  border: solid 1px red;
 }
+
+.card-product-selected:hover {
+  box-shadow: 10px 5px 5px rgb(114, 109, 109);
+}
+
 
 .card-product-selected > img {
   height: 100%;
   width: 160px;
   object-fit: cover;
   border-radius: 15px;
-  border: solid 1px red;
 }
 
 .card-product-selected .card-product-selected-infos {
@@ -27,36 +30,40 @@
     margin-left: 6px;
     margin-top: 1px;
     font-weight: bolder;
-    border: solid 1px red;
+
+    .title a {
+    text-decoration: none;
+    }
   }
+
 
   .description {
     text-align: left;
+    overflow: hidden;
     font-size: 12px;
     margin-left: 6px;
-    margin-top: 2px;
-    border: solid 1px red;
+    margin-top: 12px;
+    height: 70px;
   }
 
   .quantity {
     text-align: left;
     font-size: 18px;
-    margin-left: 6px;
-    margin-top: 2px;
+    right: 200px;
     font-weight: bold;
-    border: solid 1px red;
+    position: absolute;
+    bottom: 10px;
   }
 
   .price {
     text-align: left;
     font-size: 18px;
-    margin-left: 6px;
-    margin-top: 2px;
-    border: solid 1px red;
+    right: 120px;
+    position: absolute;
+    bottom: 10px;
   }
 
   .add-button {
-    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
@@ -67,7 +74,6 @@
   }
 
   .delete-button {
-    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
@@ -78,7 +84,6 @@
   }
 
   .edit-button {
-    border: solid 1px red;
     width: 36px;
     position: absolute;
     bottom: 10px;
