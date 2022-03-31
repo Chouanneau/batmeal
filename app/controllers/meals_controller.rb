@@ -40,7 +40,7 @@ class MealsController < ApplicationController
   end
 
   def edit
-    # @meal = Meal.find(params[:id])
+    @meal = Meal.find(params[:id])
   end
 
   def update
