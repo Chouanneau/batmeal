@@ -1,0 +1,32 @@
+<h1 class="text-center">Become a cook</h1>
+  <div class="row">
+
+    <div class="col-4"></div>
+
+    <div class="col-4">
+      <%= simple_form_for(current_user, url: update_cook_users_path) do |f| %>
+        <div class=“mb-2”>
+          <%= f.input :photo, label: "Upload a picture of you", as: :file %>
+        </div>
+        <div class=“mb-2”>
+         <%= f.input :cover, label: "Upload a picture of your kitchen", as: :file %>
+        </div>
+        <div class=“mb-2”>
+          <%= f.input :bio, placeholder: "Tell us a few words about yourself" %>
+        </div>
+        <div class=“mb-2”>
+          <%#= f.input :opening_hour, placeholder: "Specify your opening hours" %>
+        </div>
+        <div class=“mb-2”>
+          <%#= f.input :closing_hour, placeholder: "Specify your closing hours" %>
+        </div>
+
+        <div class=“mb-2”>
+        <%= f.submit "Create", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-4"></div>
+
+</div>

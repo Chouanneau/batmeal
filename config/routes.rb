@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   resources :meals
   resources :orders
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    collection do
+      get "/edit_cook", to: "users#edit_cook"
+      patch "/update_cook", to: "users#update_cook"
+    end
+  end
 
-  get "/users/:id/edit", to: "users#edit_user"
   get "/my_meals", to: "meals#my_meals"
 end
