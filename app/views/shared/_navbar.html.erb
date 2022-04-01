@@ -1,13 +1,20 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid d-flex">
 
-    <%= link_to "#ORDERS", class: "navbar-brand" do %>
+  <div class="basket">
+    <%= link_to "#ORDERS", class: "navbar-basket" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
     <% end %>
+  </div>
 
+  <div class="brand">
     <%= link_to "/", class: "navbar-brand-name" do %>
       <h4>batmeal</h4>
     <% end %>
+  </div>
+
+  <div class="button-become-cook">
+    <a class="button-become" href="/meals/new">Become a cook</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,8 +26,10 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My details", "#", class: "dropdown-item" %>
-              <%= link_to "My favorites orders", "#", class: "dropdown-item" %>
+              <%= link_to "Profile", "#", class: "dropdown-item" %>
+              <%= link_to "Favorites", "#", class: "dropdown-item" %>
+              <%= link_to "Order history", "#", class: "dropdown-item" %>
+              <%= link_to "My kitchen", "/my_meals", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
@@ -31,5 +40,8 @@
         <% end %>
       </ul>
     </div>
+
+  </div>
+
   </div>
 </div>
