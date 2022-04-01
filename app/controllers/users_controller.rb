@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-  def new_cook
-    @user = User.new
+  def edit_user
+    @user = User.find(params[:id])
   end
 
-  def create_new_cook
-    @user = User.new(user_params)
-    @meal.user = current_user
+  def update_user
+    @user = User.find(params[:id])
+    @user.update(meal_params)
 
     if @user.save
       redirect_to my_meals_path

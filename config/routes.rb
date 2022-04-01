@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  get "/users/:id/edit", to: "users#edit_user"
   get "/my_meals", to: "meals#my_meals"
 end
