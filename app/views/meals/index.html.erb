@@ -6,22 +6,24 @@
 
   <div class="col-6">
     <div class="list-meals">
-
       <% @meals.each do |meal| %>
-        <div class="card-product">
-          <%= link_to image_tag("https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg"), meal_path(meal) %>
-          <div class="card-product-infos">
-            <h2><%= link_to meal.title, meal_path(meal) %></h2>
-            <p><%= meal.description %>...</p>
-            <div class="meal-infos">
-              <div class="quantity"><%= meal.quantity %> left</div>
-              <div class="price">CHF <%= meal.price %></div>
-              <%= link_to meal_path(meal), class: "meal-order" do %>
-                <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
-                <% end %>
+          <div class="card-product">
+            <%= link_to meal_path(meal) do %>
+              <div class="card-product-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path meal.photo.key, height: 150, crop: :fill %>')">
+              </div>
+            <% end %>
+            <div class="card-product-infos">
+              <h2><%= link_to meal.title, meal_path(meal) %></h2>
+              <p><%= meal.description %>...</p>
+              <div class="meal-infos">
+                <div class="quantity"><%= meal.quantity %> left</div>
+                <div class="price">CHF <%= meal.price %></div>
+                <%= link_to meal_path(meal), class: "meal-order" do %>
+                  <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+                  <% end %>
+              </div>
             </div>
           </div>
-        </div>
       <% end %>
 
     </div>

@@ -38,6 +38,21 @@ box-shadow: 10px 5px 5px rgb(114, 109, 109);
   border-radius: 15px;
 }
 
+.card-product-img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-product-img-show {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
 .card-product-infos {
   position: relative;
   width: 200px;
