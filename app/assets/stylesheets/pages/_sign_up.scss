@@ -11,12 +11,23 @@
     padding-top: 12px;
     background: rgb(236, 232, 232);
     border-radius: 15px;
+
+
     }
 
     .form-sign-up-text {
     margin: 0 auto;
     height: 350px;
     padding: 12px;
+    }
+  }
 
+  .buttons-login-signup {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
