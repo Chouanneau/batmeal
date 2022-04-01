@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :meals
   resources :orders
 
+  resources :users, only: [:new, :create]
+
   get "/my_meals", to: "meals#my_meals"
 end
