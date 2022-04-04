@@ -1,0 +1,54 @@
+.search-index {
+  margin-left: 24px;
+  position: relative;
+  padding-top: 0px;
+  margin-top: 24px;
+
+  .form-control {
+    border-radius: 15px;
+    margin-bottom: 6px;
+  }
+
+  .btn {
+   position: absolute;
+   top: 0px;
+   right: 10px;
+   border-radius: 15px;
+   color: black;
+   background-color: #f4f4f4;
+   border: 1px solid black;
+  }
+
+  .btn:hover {
+    color: white;
+    background-color: rgb(51, 139, 51);
+    border: 1px solid rgb(51, 139, 51);
+    text-decoration: none;
+  }
+}
+
+.meals-found {
+  height: 32px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.nearme {
+  position: absolute;
+  bottom: -40px;
+  padding: 6px;
+  right: 10px;
+  border-radius: 15px;
+  color: black;
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+.nearme:hover {
+  color: white;
+  background-color: rgb(51, 139, 51);
+  border: 1px solid rgb(51, 139, 51);
+  text-decoration: none;
+}

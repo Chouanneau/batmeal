@@ -33,6 +33,13 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  .card-cook-opening {
+    right: 16px;
+    width: 160px;
+    text-align: center;
+
+  }
 }
 
 .card-cook-infos .card-cook-user {
