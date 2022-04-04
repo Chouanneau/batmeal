@@ -1,19 +1,10 @@
 class OrdersController < ApplicationController
-  def set_order
-    @order = Order.find(session[:order_id])
-    rescue ActiveRecord::RecordNotFound
-    @order = Order.create
-    session[:order_id] = @order.id
+  def show
+    @order = Order.find(params[:id])
   end
 
-  def create
-    @order.add_meal(params)
+  def add_ordered_meal_to_cart
+    @ordered_meal = Meal.find(params[:id])
 
-    if @order.save
-      redirect_to order_path
-    else
-      flash[:error] = 'There was a problem adding this item to your cart.'
-      redirect_to @ordered_meal
-    end
   end
 end
