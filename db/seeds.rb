@@ -25,11 +25,21 @@ Review.destroy_all
 # file = "skis.html"
 # idee de scraping pour les skis
 
-file = "recipes.html"
 file_cook = "cook.html"
+doc_cook = Nokogiri::HTML(File.open(file_cook), nil, "utf-8")
+file = "recipes.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
-doc_cook = Nokogiri::HTML(File.join(file_cook), nil, "utf-8")
-# user1 = User.create!(username: "brice", first_name: "Brice", last_name:"Blanchard", email: "brice@gmail.com", password: "123456", address_street: "Chemin de la Pommeraie", address_street_number: 15, city: "Prilly", zipcode: "1008" , country: "Switzerland", phone_number:"0000000000", is_customer: true, is_cook: false )
+
+
+doc_cook.search('.answer').each do |element|
+        user1 = User.new(username: "brice", first_name: "Brice", last_name:"Blanchard", email: "brice@gmail.com", password: "123456", address_street: "Chemin de la Pommeraie", address_street_number: 15, city: "Prilly", zipcode: "1008" , country: "Switzerland", phone_number:"0000000000", is_customer: true, is_cook: false, role: 1 )
+        photo_url = element.search('.answer img').attribute('src').to_s
+        byebug
+        photo_file_cook = URI.open(photo_url)
+        user1.photo.attach(io: photo_file_cook, filename: "avatar.jpg", content_type: 'image/jpg')
+        user1.save!
+end
+
 # user2 = User.create!(username: "matthieu", first_name: "Matthieu", last_name:"Kalos", email: "matthieu@gmail.com", password: "123456", address_street: "Route de la Pale", address_street_number: 8, city: "Denges", zipcode: "1026" , country: "Switzerland", phone_number:"0000000000", is_customer: true, is_cook: true )
 # user3 = User.create!(username: "david", first_name: "David", last_name:"Trinchin", email: "david@gmail.com", password: "123456", address_street: "Chemin des Sablons", address_street_number: 13, city: "Lausanne", zipcode: "1007" , country: "Switzerland", phone_number:"0000000000", is_customer: false, is_cook: true )
 # user4 = User.create!(username: "alex", first_name: "Alex", last_name:"Pouard", email: "alex@gmail.com", password: "123456", address_street: "Avenue du Temple", address_street_number: 61, city: "Lusanne", zipcode: "1012" , country: "Switzerland", phone_number:"0000000000", is_customer: true, is_cook: false )
@@ -42,33 +52,33 @@ doc_cook = Nokogiri::HTML(File.join(file_cook), nil, "utf-8")
 
 
 
-20.times do |user|
-  user = User.create!(
-    username: Faker::Name.first_name,
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
-    country: Faker::Address.country,
-    password: "123456",
-    address_street: Faker::Address.street_address,
-    address_street_number: rand(1..10000),
-    zipcode: Faker::Address.zip_code,
-    city: Faker::Address.city,
-    phone_number: Faker::PhoneNumber.cell_phone_in_e164,
-    # is_cook: false,
-    # is_customer: true,
-    longitude: Faker::Address.longitude,
-    latitude: Faker::Address.latitude,
-    role: rand(0..1)
-    # user_avatar: Faker::Avatar.image(slug: "my-own-slug", size: "50x50", format: "jpg")
-    )
-    doc_cook.search('.answer').each do |element|
-      photo_url = element.search('.answer img').attribute('src').to_s
-      photo_file_cook = URI.open(photo_url)
-      user.photo.attach(io: photo_file_cook, filename: "#{title}.jpg", content_type: 'image/jpg')
-      user.save!
-  end
-end
+# 20.times do |user|
+#   user = User.create!(
+#     username: Faker::Name.first_name,
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name,
+#     email: Faker::Internet.email,
+#     country: Faker::Address.country,
+#     password: "123456",
+#     address_street: Faker::Address.street_address,
+#     address_street_number: rand(1..10000),
+#     zipcode: Faker::Address.zip_code,
+#     city: Faker::Address.city,
+#     phone_number: Faker::PhoneNumber.cell_phone_in_e164,
+#     # is_cook: false,
+#     # is_customer: true,
+#     longitude: Faker::Address.longitude,
+#     latitude: Faker::Address.latitude,
+#     role: rand(0..1)
+#     # user_avatar: Faker::Avatar.image(slug: "my-own-slug", size: "50x50", format: "jpg")
+#     )
+#     doc_cook.search('.answer').each do |element|
+#       photo_url = element.search('.answer img').attribute('src').to_s
+#       photo_file_cook = URI.open(photo_url)
+#       user.photo.attach(io: photo_file_cook, filename: "#{title}.jpg", content_type: 'image/jpg')
+#       user.save!
+#   end
+# end
 
 
 
