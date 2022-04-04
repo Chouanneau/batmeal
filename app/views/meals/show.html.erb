@@ -14,7 +14,14 @@
           <p>I make delicious pastas, arrancinis and a lot more...</p>
         </div>
         <h2 class="card-cook-opening">Opens at - Closes at</h2>
-        <img class="card-cook-user avatar-bordered" src="https://static1.purepeople.com/articles/0/40/02/80/@/5755253-maite-lors-d-une-conference-de-presse-po-624x600-3.jpg" />
+        <div class="card-cook-user avatar-bordered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @user.avatar.key, height: 150, crop: :fill %>')" >
+</div>
+**goodpicture
+<%= cl_image_tag @user.banner.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @user.avatar.key, height: 300, width: 400, crop: :fill %>
+**
+
+
       </div>
     </div>
 
