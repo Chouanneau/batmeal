@@ -1,0 +1,41 @@
+.login-complet {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-main-page {
+  display: flex;
+  justify-content: center;
+  padding: 14%;
+  color: white;
+  width: 55%;
+  height: 100%;
+
+  .background-image {
+    width: 100vw;
+  }
+
+  .sign-in-form {
+    border: 1px solid rgb(196, 190, 190);
+    padding-top: 20%;
+    border-radius: 15px;
+  }
+}
+
+
+.login-sign-up {
+  width: 45%;
+  background-color: rgb(106, 173, 106);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+}
