@@ -1,0 +1,26 @@
+.search-index {
+  margin-left: 24px;
+  position: relative;
+  padding-top: 0px;
+  margin-top: 24px;
+
+  .form-control {
+    border-radius: 15px;
+  }
+
+  .btn {
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   border-radius: 15px;
+   color: white;
+   background-color: rgb(51, 139, 51);
+
+  }
+}
+
+.meals-found {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
