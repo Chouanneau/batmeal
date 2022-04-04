@@ -9,7 +9,8 @@ class User < ApplicationRecord
   has_many :orders
   has_many :reviews
   has_many :meals
-  has_many_attached :photos
+  has_one_attached :avatar
+  has_one_attached :banner
 
   geocoded_by :full_address
   after_validation :geocode
