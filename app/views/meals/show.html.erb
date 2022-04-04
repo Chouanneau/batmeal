@@ -22,7 +22,8 @@
 
 
     <div class="card-product-selected">
-      <img src="https://m.bettybossi.ch/static/rezepte/x/bb_bbzb220215_0006a_x.jpg" />
+      <div class="card-product-img-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @meal.photo.key, height: 150, crop: :fill %>')">
+      </div>
       <div class="card-product-selected-infos">
         <div class="title"><%= @meal.title %></div>
         <div class="description"><%= @meal.description %></div>
