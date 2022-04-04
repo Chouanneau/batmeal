@@ -50,9 +50,11 @@ doc_cook.search('.answer img').first(10).each_with_index do |element, i|
   photo_url = element.attribute('src')
   photo_file_cook = URI.open(photo_url)
   user.avatar.attach(io: photo_file_cook, filename: "avatar.jpg", content_type: 'image/jpg')
+  # byebug
   photo_url2 = "https://assets.caisy.io/assets/c5b98fcc-5e23-4df0-a5cd-2a7527d26cff/auOkRmCA7i/e697978e-fefc-40b7-96bc-2d6e08655cadd75a8d1fff3e49f7aea027be33306018edbf286bc1124d7d801445e04a2555d50150102V8Zarge009.jpg?w=1536&h=864"
   photo_file_banner = URI.open(photo_url2)
   user.banner.attach(io: photo_file_banner, filename: "banner.jpg", content_type: 'image/jpg')
+  # byebug
   user.save!
 end
 
