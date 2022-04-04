@@ -20,6 +20,9 @@
         <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
       <% end %>
+      <% if @meals %>
+        <span> <%= @meals.count %> Meals around you</span>
+      <% end %>
   </div>
 </div>
 
