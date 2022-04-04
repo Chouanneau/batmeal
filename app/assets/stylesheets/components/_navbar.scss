@@ -56,15 +56,22 @@
   width: 260px;
 
   .button-become {
-    color: #4A4A4A;
-    border: 1px solid #4A4A4A;
+    color: black;
+    border: 1px solid black;
     padding: 8px 24px;
     border-radius: 50px;
     font-weight: lighter;
-    opacity: 0.6;
     transition: opacity 0.3s ease;
     text-decoration: none;
+
   }
+
+  .button-become:hover {
+    color: white;
+    background-color: rgb(51, 139, 51);
+    border: 1px solid rgb(51, 139, 51);
+  }
+
   .navbar-collapse {
     flex-grow: 0;
   }

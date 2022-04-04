@@ -2,21 +2,31 @@ class MealsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @users = User.all
     if params[:search].present?
       sql_query = " \
-        meals.title ILIKE :query \
-        OR meals.description ILIKE :query \
+      meals.title ILIKE :query \
+      OR meals.description ILIKE :query \
+      OR users.city ILIKE :query \
+      OR users.username ILIKE :query \
       "
-      @meals = Meal.all.where(sql_query, query: "%#{params[:search][:query]}%")
+      @meals = Meal.joins(:user).where(sql_query, query: "%#{params[:search]}%")
+    elsif params[:address].present?
+      users = User.near(params[:address], 3)
+        @meals_array = users.map do |user|
+          user.meals
+        end
+      @meals = @meals_array.flatten
     else
       @meals = Meal.all
     end
-    @markers = @users.geocoded.map do |user|
+
+    # @users = User.all
+
+    @markers = @meals.map do |meal|
       {
-        lat: user.latitude,
-        lng: user.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { user: user }),
+        lat: meal.user.latitude,
+        lng: meal.user.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { user: meal.user }),
         image_url: helpers.asset_url("")
       }
     end
@@ -24,6 +34,16 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
+    @user = @meal.user
+    # byebug
+    # @user = Meal.find(params[:id])
+
+    @markers = [{
+        lat: @user.latitude,
+        lng: @user.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { user: @user }),
+        image_url: helpers.asset_url("")
+      }]
   end
 
   def new

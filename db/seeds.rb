@@ -59,9 +59,11 @@ end
 
 categories = ["starter", "main course", "desert", "drink"]
 users = User.where(is_cook: true)
+
 # byebug
 
 doc.search('.card__recipe').first(9).each_with_index do |element, i|
+
   title = element.search('.card__title').text.strip
   description = element.search('.card__summary').text.strip
   # byebug
@@ -82,6 +84,8 @@ doc.search('.card__recipe').first(9).each_with_index do |element, i|
     date_time_start: Time.now,
     date_time_end: Date.tomorrow.in_time_zone.change(hour: 12),
     user: users[i]
+
+
     )
     meal.photo.attach(io: photo_file, filename: "#{title}.jpg", content_type: 'image/jpg')
     meal.save!

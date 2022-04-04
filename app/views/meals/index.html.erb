@@ -1,9 +1,38 @@
+<div class="row">
+  <div class="col-6 search-index">
+      <% if user_signed_in? %>
+        <%= form_tag meals_path, method: :get do %>
+          <%= text_field_tag :search,
+            params[:search],
+            class: "form-control",
+            placeholder: "Find a meal"
+          %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= link_to "Closest to me", meals_path(address: current_user.full_address), class:"nearme" %>
+        <% end %>
+      <% else %>
+        <%= form_tag meals_path, method: :get do %>
+          <%= text_field_tag :search,
+            params[:search],
+            class: "form-control",
+            placeholder: "Find a meal"
+          %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
+  </div>
+</div>
 
-<a class="btn btn-ghost" href="#">Closest to you</a>
+<div class="row meals-found">
+  <div class="col-6">
+    <% if @meals %>
+    <span><strong> <%= @meals.count %> Meals found near you...</strong></span>
+    <% end %>
+  </div>
+</div>
 
 
 <div class="row">
-
   <div class="col-6">
     <div class="list-meals">
       <% @meals.each do |meal| %>
@@ -25,7 +54,6 @@
             </div>
           </div>
       <% end %>
-
     </div>
   </div>
 
