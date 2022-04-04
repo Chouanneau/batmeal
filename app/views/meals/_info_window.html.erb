@@ -1,2 +1,13 @@
-<h2><%= user.first_name %></h2>
-<h2><%= user.last_name %></h2>
+<div class="container">
+  <div class="col-4">
+    <%= cl_image_tag user.avatar.key, height: 60, width: 45, crop: :fill %>
+  </div>
+  <div class="col-8">
+    <div class="row">
+      <h5><%= user.first_name %></h5>
+    </div>
+    <div class="row">
+      <h5><%= user.last_name %></h5>
+    </div>
+  </div>
+</div>

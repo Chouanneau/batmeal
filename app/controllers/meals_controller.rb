@@ -30,6 +30,10 @@ class MealsController < ApplicationController
         image_url: helpers.asset_url("")
       }
     end
+
+    @user_latitude = request.location.latitude
+    @user_longitude = request.location.longitude
+
   end
 
   def show

@@ -46,7 +46,7 @@ is_cook = [false, true, true, true, true, true, true, true, true, true ]
 role = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 
 doc_cook.search('.answer img').first(10).each_with_index do |element, i|
-  user = User.new(username: username[i], first_name: first_name[i], last_name: last_name[i], email: email[i], password: "123456", address_street: address_street[i], address_street_number: address_street_number[i], city: city[i], zipcode: zipcode[i] , country: country[i], phone_number: phone_number[i], is_customer: is_customer[i], is_cook: is_cook[i], role: role[i] )
+  user = User.new(username: username[i], first_name: first_name[i], last_name: last_name[i], email: email[i], password: "123456", address_street: address_street[i], address_street_number: address_street_number[i], city: city[i], zipcode: zipcode[i], country: country[i], phone_number: phone_number[i], is_customer: is_customer[i], is_cook: is_cook[i], role: role[i] )
   photo_url = element.attribute('src')
   photo_file_cook = URI.open(photo_url)
   user.avatar.attach(io: photo_file_cook, filename: "avatar.jpg", content_type: 'image/jpg')
