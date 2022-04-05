@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum role: { customer: 0, cook: 1, admin: 2 }
+  enum role: { customer: 0, cook: 1 }
 
   has_many :orders
   has_many :reviews

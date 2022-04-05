@@ -10,7 +10,7 @@
             placeholder: "Find a meal"
           %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
-        <%= link_to "Closest to me", meals_path(address: current_user.full_address), class:"nearme" %>
+        <%= link_to "Closest to me", meals_path(address: request.location), class:"nearme" %>
         <% end %>
       <% else %>
         <%= form_tag meals_path, method: :get do %>
