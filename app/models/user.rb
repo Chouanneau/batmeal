@@ -14,6 +14,8 @@ class User < ApplicationRecord
 
   geocoded_by :full_address
   after_validation :geocode
+  # geocoded_by :ip_address,
+  # :latitude => :lat, :longitude => :lon
 
   def full_address
     "#{self.address_street_number} #{self.address_street}, #{self.city}, #{self.zipcode}, #{self.country}"
