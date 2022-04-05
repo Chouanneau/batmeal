@@ -49,7 +49,7 @@
               <div class="meal-infos">
                 <div class="quantity"><%= meal.quantity %> left</div>
                 <div class="price">CHF <%= meal.price %></div>
-                <%= link_to meal_path(meal), class: "meal-order" do %>
+                <%= link_to meal_ordered_meals_path(meal), method: :post, class: "meal-order" do %>
                   <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
                   <% end %>
               </div>
