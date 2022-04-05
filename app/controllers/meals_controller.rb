@@ -2,6 +2,9 @@ class MealsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
+    @user_latitude = request.location.latitude
+    @user_longitude = request.location.longitude
+
     if params[:search].present?
       sql_query = " \
       meals.title ILIKE :query \
@@ -11,8 +14,7 @@ class MealsController < ApplicationController
       "
       @meals = Meal.joins(:user).where(sql_query, query: "%#{params[:search]}%")
     elsif params[:address].present?
-      @user_latitude = request.location.latitude
-      @user_longitude = request.location.longitude
+
       location = [@user_latitude, @user_longitude]
       users = User.near(location, 3)
 
