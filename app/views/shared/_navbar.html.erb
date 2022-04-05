@@ -2,7 +2,7 @@
   <div class="container-fluid d-flex">
 
   <div class="basket">
-    <%= link_to "#ORDERS", class: "navbar-basket" do %>
+    <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
     <% end %>
   </div>

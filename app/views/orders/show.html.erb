@@ -1,5 +1,4 @@
 <h1>Your order</h1>
-<ul>
-<li>
-</li>
-</ul>
+<% @ordered_meals.each do |ordered_meal| %>
+        <div class="quantity"><%= ordered_meal.quantity %></div>
+<% end %>
