@@ -54,11 +54,67 @@
   font-weight: lighter;
   transition: opacity 0.3s ease;
   text-decoration: none;
-
 }
 
 .button-create-a-meal:hover {
   color: white;
   background-color: rgb(51, 139, 51);
   border: 1px solid rgb(51, 139, 51);
+}
+
+.button-create-cook {
+  margin-bottom: 12px;
+  width: 100%;
+  height: 36px;
+  color:white;
+  background-color: rgb(51, 139, 51);
+  border: 1px solid rgb(51, 139, 51);
+  border-radius: 15px;
+
+  .input {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: rgb(51, 139, 51);
+  width: 100%;
+  height: 24px;
+ }
+}
+
+.button-create-cook:hover {
+  color:rgb(51, 139, 51);
+  background-color: #F4F4F4;
+  border: 1px solid rgb(51, 139, 51);
+}
+
+.button-maybe-later {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  height: 36px;
+  color:black;
+  border: 1px solid black;
+  background-color: #F4F4F4;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+  margin-bottom: 6px;
+}
+
+.button-maybe-later a {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  padding: 6px;
+  color: black;
+}
+
+.button-maybe-later:hover {
+  background-color:  #4A4A4A;
+  border: 1px solid  #4A4A4A;
+
+  a {
+    color: white;
+  }
 }
