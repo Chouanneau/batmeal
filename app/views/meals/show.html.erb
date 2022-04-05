@@ -24,7 +24,7 @@
 
 
     <div class="card-product-selected">
-      <div class="card-product-img-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @meal.photo.key, height: 50, crop: :fill %>')">
+      <div class="card-product-img-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @meal.photo.key, crop: :fill %>')">
       </div>
       <div class="card-product-selected-infos">
         <div class="title"><%= @meal.title %></div>

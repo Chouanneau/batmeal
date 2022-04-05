@@ -14,14 +14,14 @@
 }
 
 
-.card-product-selected > img {
-  height: 100%;
-  width: 150px;
-  border-radius: 15px;
-}
 
 .card-product-selected .card-product-selected-infos {
   position: relative;
+
+  .card-product-show {
+    height: 150px;
+    width: 150px;
+  }
 
   .title {
     text-align: left;
