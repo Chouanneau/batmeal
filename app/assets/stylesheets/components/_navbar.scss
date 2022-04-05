@@ -13,6 +13,7 @@
 }
 
 .basket{
+  position: relative;
   height: 60px;
   width: 260px;
 
@@ -21,6 +22,21 @@
     height: 40px;
     width: 40px;
   }
+
+  .pastille {
+    position: absolute;
+    border: 1px solid rgb(51, 139, 51);
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(51, 139, 51);
+    color: white;
+    margin-bottom: 6px;
+    top:6px;
+    left:42px;
+    }
 }
 
 
