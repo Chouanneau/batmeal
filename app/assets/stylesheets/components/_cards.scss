@@ -18,7 +18,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 160px;
+  height: 150px;
   background: rgb(236, 232, 232);
   display: flex;
   width: 360px;
@@ -33,7 +33,7 @@ box-shadow: 10px 5px 5px rgb(114, 109, 109);
 
 .card-product img {
   height: 100%;
-  width: 160px;
+  width: 150px;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -42,14 +42,14 @@ box-shadow: 10px 5px 5px rgb(114, 109, 109);
   height: 100%;
   width: 150px;
   object-fit: cover;
-  border-radius: 15px;
+
 }
 
 .card-product-img-show {
   height: 100%;
-  width: 150px;
+  width: 350px;
   object-fit: cover;
-  border-radius: 15px;
+
 }
 
 

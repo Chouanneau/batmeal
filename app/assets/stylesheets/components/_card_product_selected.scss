@@ -1,8 +1,8 @@
 .card-product-selected {
-  overflow: hidden;
-  height: 160px;
-  background: rgb(236, 232, 232);
   display: flex;
+  overflow: hidden;
+  height: 150px;
+  background: rgb(236, 232, 232);
   width: 100%;
   margin-left: 12px;
   margin-bottom: 12px;
@@ -14,15 +14,14 @@
 }
 
 
-.card-product-selected > img {
-  height: 100%;
-  width: 160px;
-  object-fit: cover;
-  border-radius: 15px;
-}
 
 .card-product-selected .card-product-selected-infos {
   position: relative;
+
+  .card-product-show {
+    height: 150px;
+    width: 150px;
+  }
 
   .title {
     text-align: left;

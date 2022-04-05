@@ -8,7 +8,6 @@ class CreateMeals < ActiveRecord::Migration[6.1]
       t.integer :quantity
       t.datetime :date_time_start
       t.datetime :date_time_end
-
       t.timestamps
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_01_123325) do
+ActiveRecord::Schema.define(version: 2022_04_05_073207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2022_04_01_123325) do
   create_table "meals", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.float "price"
+    t.integer "price"
     t.string "category"
     t.integer "quantity"
     t.datetime "date_time_start"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 2022_04_01_123325) do
     t.integer "role", default: 0
     t.time "opening_hour"
     t.time "closing_hour"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

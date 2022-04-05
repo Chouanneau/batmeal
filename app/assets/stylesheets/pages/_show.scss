@@ -1,0 +1,26 @@
+.cook-show {
+display: flex;
+flex-direction: row;
+}
+
+.cook-meals {
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+
+  .card-cook-and-meals {
+    display: flex;
+    border: 1px green solid;
+  }
+
+  .card-product-selected {
+    display: flex;
+    border: 1px black solid;
+  }
+}
+
+
+
+.map {
+  border: 1px blue solid;
+}
