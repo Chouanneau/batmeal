@@ -2,9 +2,22 @@
   <div class="container-fluid d-flex">
 
   <div class="basket">
+    <% if user_signed_in? %>
     <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
     <% end %>
+
+    <% else %>
+          <!--li class="nav-item"-->
+        <%= link_to "/", class: "navbar-basket" do %>
+      <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
+    <% end %>
+    <% end %>
+    <div>
+    <p>
+    <%= OrderedMeal.count %>
+    </p>
+    </div>
   </div>
 
   <div class="brand">
@@ -27,7 +40,6 @@
             <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Favorites", "#", class: "dropdown-item" %>
               <%= link_to "Order history", "#", class: "dropdown-item" %>
               <%= link_to "My kitchen", "/my_meals", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

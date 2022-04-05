@@ -1,21 +1,13 @@
 class OrderedMealsController < ApplicationController
-  def new
-    @ordered_meal = Ordered_meal.new
-  end
-
   def create
-    raise
-    @ordered_meal = Ordered_meal.new(ordered_meal_params)
+    @ordered_meal = OrderedMeal.new
+    @order = current_user.orders.first
     @ordered_meal.order = @order
-    raise
+    @meal = Meal.find(params[:meal_id])
+    @ordered_meal.meal = @meal
+    @ordered_meal.quantity = 1
     @ordered_meal.save
 
     redirect_to meals_path
-  end
-
-  private
-
-  def meal_params
-    params.require(:ordered_meal).permit(:quantity)
   end
 end
