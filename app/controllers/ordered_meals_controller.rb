@@ -8,6 +8,7 @@ class OrderedMealsController < ApplicationController
     @ordered_meal.quantity = 1
     @ordered_meal.save
 
-    redirect_to meals_path
+    redirect_back(fallback_location: root_path)
+
   end
 end
