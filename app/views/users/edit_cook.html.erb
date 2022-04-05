@@ -1,7 +1,12 @@
+<br>
+
 <h1 class="text-center">Become a cook</h1>
+
+<br>
+
   <div class="row">
 
-    <div class="col-4"></div>
+    <div class="col"></div>
 
     <div class="col-4">
       <%= simple_form_for(current_user, url: update_cook_users_path) do |f| %>
@@ -15,20 +20,23 @@
           <%= f.input :bio, placeholder: "Tell us a few words about yourself" %>
         </div>
         <div class=“mb-2”>
-          <%#= f.input :opening_hour, placeholder: "Specify your opening hours" %>
+          <%= f.input :opening_hour, placeholder: "Specify your opening hours" %>
         </div>
         <div class=“mb-2”>
-          <%#= f.input :closing_hour, placeholder: "Specify your closing hours" %>
+          <%= f.input :closing_hour, placeholder: "Specify your closing hours" %>
         </div>
 
-        <div class=“mb-2”>
-        <%= f.submit "Create", class: "btn btn-primary" %>
+          <%= f.submit "Welcome on board!", class:"button-create-cook"%>
+          <% end %>
+
+
+        <div class="button-maybe-later">
+          <a href="/meals">maybe later</a>
         </div>
-      <% end %>
+
     </div>
 
-    <a href="/meals">Do this later</a>
 
-    <div class="col-4"></div>
+    <div class="col"></div>
 
 </div>
