@@ -11,7 +11,10 @@ class MealsController < ApplicationController
       "
       @meals = Meal.joins(:user).where(sql_query, query: "%#{params[:search]}%")
     elsif params[:address].present?
-      users = User.near(params[:address], 3)
+      @user_latitude = params[:address].latitude
+      @user_longitude = params[:address].longitude
+      users = User.near([@user_latitude, @user_longitude], 3)
+      # users = User.near([46.5289, 6.6178], 3)
         @meals_array = users.map do |user|
           user.meals
         end
@@ -19,6 +22,15 @@ class MealsController < ApplicationController
     else
       @meals = Meal.all
     end
+
+    # users = User.near(params[:address], 3)
+    #     @meals_array = users.map do |user|
+    #       user.meals
+    #     end
+    #   @meals = @meals_array.flatten
+    # else
+    #   @meals = Meal.all
+    # end
 
     # @users = User.all
 
@@ -31,8 +43,6 @@ class MealsController < ApplicationController
       }
     end
 
-    @user_latitude = request.location.latitude
-    @user_longitude = request.location.longitude
 
   end
 
