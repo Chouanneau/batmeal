@@ -1,9 +1,9 @@
 <h1>Your order</h1>
 
+<div>
 <% @ordered_meals.each do |ordered_meal| %>
   <p><%= ordered_meal.meal.title %></p>
   <p><%= ordered_meal.quantity %></p>
   <p><%= ordered_meal.meal.price %></p>
 <% end %>
-
-<%= OrderedMeal.count %>
+</div>
