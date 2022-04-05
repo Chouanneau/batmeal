@@ -1,8 +1,8 @@
 .card-product-selected {
+  display: flex;
   overflow: hidden;
   height: 150px;
   background: rgb(236, 232, 232);
-  display: flex;
   width: 100%;
   margin-left: 12px;
   margin-bottom: 12px;
@@ -16,8 +16,7 @@
 
 .card-product-selected > img {
   height: 100%;
-  width: 160px;
-  object-fit: cover;
+  width: 150px;
   border-radius: 15px;
 }
 
