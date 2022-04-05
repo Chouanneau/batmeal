@@ -1,59 +1,48 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid d-flex">
-
-  <div class="basket">
-    <% if user_signed_in? %>
-    <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
-      <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
-    <% end %>
-
-    <% else %>
-          <!--li class="nav-item"-->
+    <div class="basket">
+      <% if user_signed_in? && current_user.orders.any? %>
+          <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
+            <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
+          <% end %>
+        <p><%= OrderedMeal.count %></p>
+      <% else %>
         <%= link_to "/", class: "navbar-basket" do %>
-      <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
-    <% end %>
-    <% end %>
-    <div>
-    <p>
-    <%= OrderedMeal.count %>
-    </p>
-    </div>
-  </div>
-
-  <div class="brand">
-    <%= link_to "/", class: "navbar-brand-name" do %>
-      <h4>batmeal</h4>
-    <% end %>
-  </div>
-
-  <div class="button-become-cook">
-    <a class="button-become" href="/users/edit_cook">Become a cook</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Order history", "#", class: "dropdown-item" %>
-              <%= link_to "My kitchen", "/my_meals", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <!--li class="nav-item"-->
-           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
+          <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
         <% end %>
-      </ul>
+      <% end %>
     </div>
+    <div class="brand">
+      <%= link_to "/", class: "navbar-brand-name" do %>
+        <h4>batmeal</h4>
+      <% end %>
+    </div>
+    <div class="button-become-cook">
+      <% if !user_signed_in? || current_user.role == "customer" %>
+        <a class="button-become" href="/users/edit_cook">Become a cook</a>
+      <% end %>
+      <% if user_signed_in? %>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                  <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <%= link_to "Order history", "#", class: "dropdown-item" %>
+                    <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        <% end %>
 
-  </div>
-
+        <% if !user_signed_in? %>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
   </div>
 </div>
