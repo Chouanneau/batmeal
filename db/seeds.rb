@@ -13,10 +13,10 @@ require 'faker'
 
 
 # idee de scraping pour les skis
-
+OrderedMeal.destroy_all
+Order.destroy_all
 Meal.destroy_all
 User.destroy_all
-Order.destroy_all
 Review.destroy_all
 
 # user1 = User.create!(username: "Matthieu", address: "danstoncul", email: "test@gmail.com", password: "1213456")
