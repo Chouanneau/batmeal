@@ -14,7 +14,6 @@
             <%= f.input :username, required: true %>
           </div>
         </div>
-
         <div class="row names">
           <div class="col-6">
             <%= f.input :first_name, required: true, autofocus: true %>
@@ -23,8 +22,6 @@
             <%= f.input :last_name, required: true %>
           </div>
         </div>
-
-
         <div class="row addresses">
           <div class="col-6">
             <%= f.input :address_street, required: true %>
@@ -33,7 +30,6 @@
             <%= f.input :address_street_number, required: true %>
           </div>
         </div>
-
         <div class="row addresses2">
           <div class="col-3">
             <%= f.input :city, required: true %>
@@ -45,7 +41,6 @@
             <%= f.input :country, required: true, as: :string %>
           </div>
         </div>
-
         <div class="row phone">
           <div class="col-6">
             <%= f.input :phone_number, required: true %>
@@ -55,7 +50,6 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
         </div>
-
         <div class="row passwords">
           <div class="col-6">
             <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
@@ -68,12 +62,9 @@
         <div class="buttons-signup-signup">
           <%= f.submit "Sign Up" %>
           <% end %>
-
-          <%= render "devise/shared/links" %>
         </div>
-
-
       </div>
+          <%= render "devise/shared/links" %>
     </div>
 
   </div>

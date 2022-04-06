@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     resources :ordered_meals, only: [:new, :create]
   end
 
-  resources :orders
+  resources :orders do
+    get "/confirmation", to: "orders#confirmation"
+  end
+
 
   resources :users, only: [:new, :create] do
     collection do
@@ -16,4 +19,5 @@ Rails.application.routes.draw do
   end
 
   get "/my_meals", to: "meals#my_meals"
+
 end

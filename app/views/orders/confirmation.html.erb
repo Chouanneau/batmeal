@@ -1,0 +1,26 @@
+<br>
+<h1 class="text-center">Your Order #<%= @order.id %> is confirmed</h1>
+<h4 class="text-center">Pick up your food at your favorite cook place!</h4>
+  <div class="col-3">
+  </div>
+  <div class="col-6">
+  <% @ordered_meals.each do |ordered_meal| %>
+    <div class="card">
+    <p><%= ordered_meal.meal.user.username %></p>
+    <p><%= ordered_meal.meal.user.full_address %></p>
+    <p><%= ordered_meal.meal.user.opening_hour %></p>
+    <p><%= ordered_meal.meal.user.closing_hour %></p>
+    <p><%= ordered_meal.meal.title %></p>
+    <p><%= ordered_meal.quantity %></p>
+    <p><%= ordered_meal.meal.price %></p>
+    </div>
+<% end %>
+  </div>
+  <div class="col-3">
+  </div>
+
+
+
+<p><%= @total_price %></p>
+
+<a href="/meals">Go back to a new meal selection!</a>

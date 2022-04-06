@@ -31,6 +31,7 @@ doc_cook = Nokogiri::HTML(File.open(file_cook), nil, "utf-8")
 file = "recipes.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
+
 username = ["Brice", "Matthieu", "David", "Alex", "Cataline", "Momo", "Quentin", "Antoine", "Thibault", "Pedro" ]
 first_name = ["Brice", "Matthieu", "David", "Alex", "Cataline", "Momo", "Quentin", "Antoine", "Thibault", "Pedro" ]
 last_name = ["Palau", "Gerard", "Cali", "Houston", "Manwel", "Siroté", "Ricard", "Gin", "Tonic", "Calster" ]
@@ -38,7 +39,7 @@ email = ["brice@gmail.com", "matthieu@gmail.com", "david@gmail.com", "alex@gmail
 password = ["123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456" ]
 address_street = ["Chemin de Montagny", "Route de la Pale", "Chemin des Sablons", "Avenue du Temple", "Chemin de la Pommeraie", "Chemin de Vuichardaz", "Chemin des Crêts", "Rue du Jura", "Chemin de Prellionnaz", "Avenue Jean-Jacques Cart"   ]
 address_street_number = [55, 8, 13, 61, 15, 11, 17, 1, 11, 5 ]
-city = ["Villette", "Danges", "Lausanne", "Lausanne", "Prilly", "Bussigny", "Genève", "Genève", "Morges", "Morges" ]
+city = ["Villette", "Denges", "Lausanne", "Lausanne", "Prilly", "Bussigny", "Genève", "Genève", "Morges", "Morges" ]
 zipcode = ["1091", "1026", "1007", "1012", "1008", "1030", "1209", "1201", "1110", "1110" ]
 country = ["Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland" ]
 phone_number = ["0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000"]
