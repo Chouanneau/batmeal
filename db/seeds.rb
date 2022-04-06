@@ -36,7 +36,7 @@ country = ["Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerl
 phone_number = ["0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000"]
 is_customer = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 is_cook = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
-role = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+role = ["cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook" ]
 opening_hour = ["19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h"]
 closing_hour =["21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h"]
 
@@ -76,7 +76,7 @@ end
 
 
 categories = ["starter", "main course", "desert", "drink"]
-users = User.where(is_cook: true)
+users = User.where(role: "cook")
 
 # byebug
 
