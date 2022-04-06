@@ -8,4 +8,6 @@
   <% end %>
 </div>
 <h2>Total price</h2>
-<button><a href="/orders/confirmation">Confirm order</a></button>
+<button>
+<%= link_to 'Confirm order', order_confirmation_path(order) %>
+</button>
