@@ -22,6 +22,7 @@ doc_cook = Nokogiri::HTML(File.open(file_cook), nil, "utf-8")
 file = "recipes.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
+
 username = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 first_name = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 last_name = ["Palau", "Chouanneau", "Cali", "Houston", "Manwel", "Siroté", "Ricard", "Gin", "Tonic", "Calster", "Chouanneau", "Chevalier", "Leloup", "Turbak", "Lieber", "Parizon", "De Turkheim", "Ledys", "Ferron" ]
@@ -61,6 +62,7 @@ bio = ["Chef Brice Palau is perhaps best known for being the man behind Rome’s
 
 doc_cook.search('.answer img').first(19).each_with_index do |element, i|
   user = User.new(username: username[i], first_name: first_name[i], last_name: last_name[i], email: email[i], password: "123456", address_street: address_street[i], address_street_number: address_street_number[i], city: city[i], zipcode: zipcode[i], country: country[i], phone_number: phone_number[i], is_customer: is_customer[i], is_cook: is_cook[i], role: role[i], bio: bio[i], opening_hour: opening_hour[i], closing_hour: closing_hour[i] )
+
   photo_url = element.attribute('src')
   photo_file_cook = URI.open(photo_url)
   user.avatar.attach(io: photo_file_cook, filename: "avatar.jpg", content_type: 'image/jpg')

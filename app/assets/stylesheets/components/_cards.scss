@@ -114,3 +114,30 @@ box-shadow: 10px 5px 5px rgb(114, 109, 109);
   height: 36px;
   width: 36px;
 }
+
+.card {
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+
+.card a {
+text-decoration: none ;
+}
+
+.card-content {
+  margin-left: 8px ;
+}
+
+.button {
+	margin-top: 10px;
+	width: 100%;
+	height: 40px;
+	border: none;
+	background: rgb(51, 139, 51);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	font-weight: 600;
+	color: white;
+}
