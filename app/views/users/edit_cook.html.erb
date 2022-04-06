@@ -21,10 +21,10 @@
           <%= f.input :bio, placeholder: "Tell us a few words about yourself" %>
         </div>
         <div class=“mb-2”>
-          <%= f.input :opening_hour, placeholder: "Specify your opening hours" %>
+          <%= f.input :opening_hour, collection: ["17h", "18h","19h","20h","21h","22h","23h"], placeholder: "Specify your opening hours" %>
         </div>
         <div class=“mb-2”>
-          <%= f.input :closing_hour, placeholder: "Specify your closing hours" %>
+          <%= f.input :closing_hour,  collection: ["18h", "18h","19h","20h","21h","22h","24h"], placeholder: "Specify your closing hours" %>
         </div>
 
           <%= f.submit "Welcome on board!", class:"button-create-cook"%>
