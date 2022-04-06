@@ -5,7 +5,7 @@
           <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
             <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
           <% end %>
-          <p class="pastille"><%= Order.joins(:ordered_meals).where("orders.user_id = #{current_user.id}").count %></p>
+          <p class="pastille"><%= Order.joins(:ordered_meals).where(user: current_user).count %></p>
       <% else %>
         <%= link_to "/", class: "navbar-basket" do %>
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
