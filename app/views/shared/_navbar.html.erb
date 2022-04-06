@@ -27,7 +27,6 @@
                 <li class="nav-item dropdown">
                   <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <%= link_to "Order history", "#", class: "dropdown-item" %>
                     <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                   </div>

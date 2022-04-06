@@ -13,6 +13,7 @@ require 'faker'
 
 
 # idee de scraping pour les skis
+
 OrderedMeal.destroy_all
 Order.destroy_all
 Meal.destroy_all

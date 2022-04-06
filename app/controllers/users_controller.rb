@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def update_cook
+    current_user.role = "cook"
     if current_user.update(cook_params)
       redirect_to my_meals_path
     else

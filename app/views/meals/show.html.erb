@@ -9,15 +9,12 @@
       <div class="kitchen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @user.banner.key, height: 260, crop: :fill %>')">
       </div>
       <div class="infos">
-        <div>
-          <h2><%= @user.username %></h2>
-          <p>loremipsumxksjksdkskdsjdjdsajdhjsahdjkashdjkahsjdhasjdhasjk</p>
-        </div>
+        <h2><%= @user.username %></h2>
+        <p>loremipsumxksjksdkskdsjdjdsajdhjsahdjkashdjkahsjdhasjdhasjk</p>
         <h3 class="opening"><%= @user.opening_hour %> - <%= @user.closing_hour %></h3>
         <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @user.avatar.key, height: 160, crop: :fill %>')">
         </div>
       </div>
-
     </div>
 
     <br>
@@ -37,16 +34,13 @@
             <div class="price">CHF <%= @meal.price %></div>
           </div>
         </div>
-        <div class="add-button">
-          <%= link_to meal_path(@meal) do %>
-          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
-          <% end %>
+        <%= link_to meal_ordered_meals_path(@meal), method: :post, class: "add-button" do %>
+        <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvPamkzw8Kwv1jeH80n1DWGKAY6bm31VZ4g&usqp=CAU" %>
+        <% end %>
         </div>
       </div>
     </div>
 
-
-  </div>
 
 
   <div class="col-6 map-users">

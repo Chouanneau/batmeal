@@ -15,7 +15,7 @@ class User < ApplicationRecord
   geocoded_by :full_address
   after_validation :geocode
   after_create :create_order
-
+  before_create :set_customer_role
 
   def full_address
     "#{self.address_street_number} #{self.address_street}, #{self.city}, #{self.zipcode}, #{self.country}"
@@ -23,5 +23,9 @@ class User < ApplicationRecord
 
   def create_order
     Order.create({user: self})
+  end
+
+  def set_customer_role
+    self.role = "customer"
   end
 end

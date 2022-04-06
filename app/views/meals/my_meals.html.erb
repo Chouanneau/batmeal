@@ -6,23 +6,23 @@
   </div>
 </div>
 
-<br>
+
 
 <div class="row">
 
   <div class="col-6">
 
     <div class="card-cook">
-      <img src="https://assets.caisy.io/assets/c5b98fcc-5e23-4df0-a5cd-2a7527d26cff/auOkRmCA7i/e697978e-fefc-40b7-96bc-2d6e08655cadd75a8d1fff3e49f7aea027be33306018edbf286bc1124d7d801445e04a2555d50150102V8Zarge009.jpg?w=1536&h=864" />
-      <div class="card-cook-infos">
+      <div class="kitchen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path current_user.banner.key, height: 260, crop: :fill %>')">
+      </div>
+      <div class="infos">
         <div>
-          <h2>Title here</h2>
-          <p>Hello! I am Italian and I developped a passion about cooking sonce I was little.</p>
-          <p>As I am cooking for my husband and my 3 kids, I can also cook for you! </p>
-          <p>I make delicious pastas, arrancinis and a lot more...</p>
+          <h2><%= current_user.username %></h2>
+          <p><%= current_user.bio %></p>
         </div>
-        <h2 class="card-cook-opening"><strong>19h - 22h</strong></h2>
-        <img class="card-cook-user avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+        <h3 class="opening"><%= current_user.opening_hour %> - <%= current_user.closing_hour %></h3>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path current_user.avatar.key, height: 160, crop: :fill %>')">
+        </div>
       </div>
     </div>
 
