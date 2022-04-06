@@ -36,6 +36,9 @@ phone_number = ["0000000000", "0000000000", "0000000000", "0000000000", "0000000
 is_customer = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 is_cook = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 role = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+
+
+
 bio = ["Chef Brice Palau is perhaps best known for being the man behind Rome’s only three-Michelin-starred restaurant, La Pergola.",
   "Synonymous with breaking Michelin stars records, Matthieu Chouanneau currently holds 17 Michelin stars. This makes him the current living chef with the most Michelin stars in the world.",
   "Another renowned French chef, David Cali has spent his 40-year career collecting Michelin stars. Growing up in his family's Michelin-star kitchen, he received his first star when he was just 26 and hasn't stopped since.",
