@@ -23,20 +23,20 @@ file = "recipes.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 
-username = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
+username = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Zoro", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 first_name = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 last_name = ["Palau", "Chouanneau", "Cali", "Houston", "Manwel", "Siroté", "Ricard", "Gin", "Tonic", "Calster", "Chouanneau", "Chevalier", "Leloup", "Turbak", "Lieber", "Parizon", "De Turkheim", "Ledys", "Ferron" ]
 email = ["brice@gmail.com", "matthieu@gmail.com", "david@gmail.com", "alex@gmail.com", "perry@gmail.com", "momo@gmail.com", "quentin@gmail.com", "antoine@gmail.com", "thibault@gmail.com", "pedro@gmail.com", "marion@gmail.com", "alice@gmail.com", "arthur@gmail.com", "yannis@gmail.com", "laurent@gmail.com", "antonio@gmail.com", "charlie@gmail.com", "mathias@gmail.com", "hans@gmail.com" ]
 password = ["123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456" ]
-address_street = ["Chemin de Montagny", "Route de la Pale", "Chemin des Sablons", "Avenue du Temple", "Chemin de la Pommeraie", "Chemin de Vuichardaz", "Chemin des Crêts", "Rue du Jura", "Chemin de Prellionnaz", "Avenue Jean-Jacques Cart", "Avenue de la Rochelle", "Avenue de Severy", "Rue du Bourg", "Rue Enning", "Rue du Jura", "Route de Vevey", "Rue de Geneve", "Rue de l'Ale", "Avenue de Morges"  ]
-address_street_number = [55, 8, 13, 61, 15, 11, 17, 1, 11, 5, 12, 2, 28, 10, 44, 12, 23, 22, 12 ]
+address_street = ["Chemin de Montagny", "Route de la Pale", "Chemin des Sablons", "Avenue du Temple", "Chemin de la Pommeraie", "Chemin de Vuichardaz", "Chemin des Crêts", "Rue du Jura", "Chemin de Prellionnaz", "Avenue Jean-Jacques Cart", "Avenue de la Rochelle", "Chemin de Renens", "Avenue de la Gare", "Rue Enning", "Rue du Jura", "Route de Vevey", "Rue de Genève", "Rue de l'Ale", "Avenue de Morges"  ]
+address_street_number = [55, 8, 13, 61, 15, 11, 17, 1, 11, 5, 12, 43, 1, 10, 44, 12, 23, 22, 12 ]
 city = ["Villette", "Denges", "Lausanne", "Lausanne", "Prilly", "Bussigny", "Genève", "Genève", "Morges", "Morges", "Prilly", "Lausanne", "Lausanne", "Lausanne", "Lausanne", "Pully", "Lausanne", "Lausanne", "Lausanne" ]
 zipcode = ["1091", "1026", "1007", "1012", "1008", "1030", "1209", "1201", "1110", "1110", "1008", "1004", "1003", "1003", "1004", "1009", "1003", "1003", "1004" ]
 country = ["Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland", "Switzerland" ]
 phone_number = ["0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000", "0000000000"]
 is_customer = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 is_cook = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
-role = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+role = ["cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook", "cook" ]
 opening_hour = ["19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h"]
 closing_hour =["21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h"]
 
@@ -76,7 +76,7 @@ end
 
 
 categories = ["starter", "main course", "desert", "drink"]
-users = User.where(is_cook: true)
+users = User.where(role: "cook")
 
 # byebug
 

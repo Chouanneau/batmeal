@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_one_attached :banner
 
   geocoded_by :full_address
-  after_validation :geocode
+  after_validation :geocode, if: :address_changed?
   after_create :create_order
   before_create :set_customer_role
 
@@ -26,6 +26,10 @@ class User < ApplicationRecord
   end
 
   def set_customer_role
-    self.role = "customer"
+      self.role = "customer" if self.role == nil
+  end
+
+  def address_changed?
+    address_street_number_changed? || address_street_number_changed? || city_changed? || zipcode_changed? || country_changed?
   end
 end
