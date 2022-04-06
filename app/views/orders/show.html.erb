@@ -19,9 +19,14 @@
       <div class="Subtotal">Sub-Total</div>
       <div class="items"><%= OrderedMeal.count %> items</div>
     </div>
-    <div class="total-amount">"our total price"</div>
+    <div class="total-amount">CHF <%= @total_price %>.-</div>
     </div>
-      <button class="button">Checkout</button>
+
+    <div class="confirmation-box">
+      <%= link_to "Check out", order_confirmation_path(@order), class:"confirmation"%>
+    </div>
+
+
     </div>
   </div>
 </div>
