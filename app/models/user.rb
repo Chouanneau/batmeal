@@ -26,6 +26,6 @@ class User < ApplicationRecord
   end
 
   def set_customer_role
-    self.role = "customer"
+    self.role = "customer" if self.role == nil
   end
 end
