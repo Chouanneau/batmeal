@@ -36,8 +36,8 @@ phone_number = ["0000000000", "0000000000", "0000000000", "0000000000", "0000000
 is_customer = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 is_cook = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
 role = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-
-
+opening_hour = ["19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h","19h"]
+closing_hour =["21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h","21h"]
 
 bio = ["Chef Brice Palau is perhaps best known for being the man behind Rome’s only three-Michelin-starred restaurant, La Pergola.",
   "Synonymous with breaking Michelin stars records, Matthieu Chouanneau currently holds 17 Michelin stars. This makes him the current living chef with the most Michelin stars in the world.",
@@ -60,7 +60,7 @@ bio = ["Chef Brice Palau is perhaps best known for being the man behind Rome’s
   "Hans Ferron became the youngest chef in Spain and the second youngest in the world to receive a Michelin star."]
 
 doc_cook.search('.answer img').first(19).each_with_index do |element, i|
-  user = User.new(username: username[i], first_name: first_name[i], last_name: last_name[i], email: email[i], password: "123456", address_street: address_street[i], address_street_number: address_street_number[i], city: city[i], zipcode: zipcode[i], country: country[i], phone_number: phone_number[i], is_customer: is_customer[i], is_cook: is_cook[i], role: role[i], bio: bio[i] )
+  user = User.new(username: username[i], first_name: first_name[i], last_name: last_name[i], email: email[i], password: "123456", address_street: address_street[i], address_street_number: address_street_number[i], city: city[i], zipcode: zipcode[i], country: country[i], phone_number: phone_number[i], is_customer: is_customer[i], is_cook: is_cook[i], role: role[i], bio: bio[i], opening_hour: opening_hour[i], closing_hour: closing_hour[i] )
   photo_url = element.attribute('src')
   photo_file_cook = URI.open(photo_url)
   user.avatar.attach(io: photo_file_cook, filename: "avatar.jpg", content_type: 'image/jpg')
