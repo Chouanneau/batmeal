@@ -17,31 +17,32 @@
         <h4>batmeal</h4>
       <% end %>
     </div>
+
     <div class="button-become-cook">
       <% if !user_signed_in? || current_user.role == "customer" %>
         <a class="button-become" href="/users/edit_cook">Become a cook</a>
       <% end %>
       <% if user_signed_in? %>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item dropdown">
-                  <%= cl_image_tag current_user.avatar.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
-                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                  </div>
-                </li>
-              </ul>
-          </div>
-        <% end %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <%= cl_image_tag current_user.avatar.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      <% end %>
 
-        <% if !user_signed_in? %>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </ul>
-          </div>
-        <% end %>
-      </div>
+      <% if !user_signed_in? %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
