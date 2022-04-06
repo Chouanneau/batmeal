@@ -5,44 +5,39 @@
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
       <div class="form-inputs">
-        <%# <select name=":user_role">
-        <option>Devenir client</option>
-        <option>Devenir cook</option>
-        </select> %>
-        <div class="row usernames">
-          <div class="col-6">
+          <div class="col-4">
             <%= f.input :username, required: true %>
           </div>
-        </div>
-        <div class="row names">
-          <div class="col-6">
+        <div class="row usernames">
+          <div class="col-4">
             <%= f.input :first_name, required: true, autofocus: true %>
           </div>
-          <div class="col-6">
+          <div class="col-4">
             <%= f.input :last_name, required: true %>
           </div>
         </div>
+
         <div class="row addresses">
           <div class="col-6">
             <%= f.input :address_street, required: true %>
           </div>
-          <div class="col-6">
-            <%= f.input :address_street_number, required: true %>
+          <div class="col-2">
+            <%= f.input :address_street_number, label:"number", required: true %>
           </div>
         </div>
         <div class="row addresses2">
+          <div class="col-2">
+            <%= f.input :zipcode, required: true %>
+          </div>
           <div class="col-3">
             <%= f.input :city, required: true %>
           </div>
           <div class="col-3">
-            <%= f.input :zipcode, required: true %>
-          </div>
-          <div class="col-6">
             <%= f.input :country, required: true, as: :string %>
           </div>
         </div>
         <div class="row phone">
-          <div class="col-6">
+          <div class="col-4">
             <%= f.input :phone_number, required: true %>
           </div>
             <%= f.input :email,
@@ -69,7 +64,6 @@
     </div>
 
   </div>
-
 
   <div class="container signup-sign-up">
     <h1>Welcome!</h1>
