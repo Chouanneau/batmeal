@@ -1,10 +1,9 @@
 <br>
 <h1 class="text-center">Your Order #<%= @order.id %> is confirmed</h1>
-<h4 class="text-center">You have been charged <strong><%= @total_price %></strong> CHF</p>
 <br>
+<h4 class="text-center">You have been charged <strong><%= @total_price %></strong> CHF</p>
 <h4 class="text-center">Pick up your food at your favorite cook place!</h4>
 <br>
-<h5 class="text-center">Order #<%= @order.id %></h5>
 <div class="row">
   <div class="col">
   </div>
@@ -13,11 +12,8 @@
       <div class="card">
       <br>
       <div class="card-content">
-        <h4 class=""><%= ordered_meal.quantity %> piece - <%= ordered_meal.meal.title %> - <%= ordered_meal.meal.price %> CHF</h4>
-        <h4 class=""><strong><%= link_to "#{ordered_meal.meal.user.username}" %></strong></h4>
-        <h4 class=""><%= ordered_meal.meal.user.full_address %></h4>
-        <h4 class=""><%= ordered_meal.meal.user.opening_hour %></h4>
-        <h4 class=""><%= ordered_meal.meal.user.closing_hour %></h4>
+        <p class=""><%= ordered_meal.quantity %> x <strong><%= ordered_meal.meal.title %></strong> - <%= ordered_meal.meal.price %> CHF</p>
+        <p class=""><em>Your cook <strong><%= link_to "#{ordered_meal.meal.user.username}" %></strong> is expecting you at <%= link_to "#{ordered_meal.meal.user.full_address}" %> between <%= ordered_meal.meal.user.opening_hour %> and <%= ordered_meal.meal.user.closing_hour %></em></p>
       </div>
       </div>
     <% end %>
