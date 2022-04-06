@@ -1,13 +1,27 @@
-<h1>Your order</h1>
-
-<div class="card-product-selected">
-  <% @ordered_meals.each do |ordered_meal| %>
-    <p><%= ordered_meal.meal.title %></p>
-    <p><%= ordered_meal.quantity %></p>
-    <p><%= ordered_meal.meal.price %></p>
-  <% end %>
+<div class="frame">
+  <div class="CartContainer">
+    <div class="Header">
+    <h3 class="Heading">Shopping Cart</h3>
+    </div>
+    <% @ordered_meals.each do |ordered_meal| %>
+      <div class="Cart-Items">
+          <div class="title"><%= ordered_meal.meal.title %></div>
+          <div class="count-amount">
+            <div class="count"><%= ordered_meal.quantity %> x</div>
+            <div class="amount"><%= ordered_meal.meal.price %>.-</div>
+          </div>
+      </div>
+    <% end %>
+    <hr>
+    <div class="checkout">
+    <div class="total">
+    <div>
+      <div class="Subtotal">Sub-Total</div>
+      <div class="items"><%= OrderedMeal.count %> items</div>
+    </div>
+    <div class="total-amount">"our total price"</div>
+    </div>
+      <button class="button">Checkout</button>
+    </div>
+  </div>
 </div>
-<h2>Total price</h2>
-<button>
-<%= link_to 'Confirm order', order_confirmation_path(order) %>
-</button>

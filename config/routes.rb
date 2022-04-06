@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   end
 
   get "/my_meals", to: "meals#my_meals"
+  get "/order_confirmation", to: "orders#confirmation"
 end
