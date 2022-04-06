@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(106, 173, 106);
+  background-color: rgb(51, 139, 51);
   padding: 2%;
   width: 55%;
   height: 100%;
@@ -22,7 +22,7 @@
     border-radius: 15px;
     color: black;
     background-color: white;
-    border: 1px solid rgb(106, 173, 106);
+    border: 1px solid rgb(51, 139, 51);
     text-decoration: none;
 
     .input {
@@ -34,7 +34,7 @@
     border-radius: 15px;
     color: black;
     background-color: white;
-    border: 1px solid rgb(106, 173, 106);
+    border: 1px solid rgb(51, 139, 51);
     text-decoration: none;
     }
 
@@ -44,7 +44,7 @@
   }
 
   .buttons-signup-signup:hover {
-    background-color: rgb(106, 173, 106);
+    background-color: rgb(51, 139, 51);
     border: 1px solid white;
     color: white;
   }
