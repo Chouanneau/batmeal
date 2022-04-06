@@ -5,7 +5,7 @@
           <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
             <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
           <% end %>
-          <p class="pastille"><%= OrderedMeal.count %></p>
+          <p class="pastille"><%= Order.joins(:ordered_meals).where(user: current_user).count %></p>
       <% else %>
         <%= link_to "/", class: "navbar-basket" do %>
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
@@ -25,7 +25,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item dropdown">
-                  <%= image_tag "https://cdn4.iconfinder.com/data/icons/e-commerce-181/512/477_profile__avatar__man_-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                  <%= cl_image_tag current_user.avatar.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
