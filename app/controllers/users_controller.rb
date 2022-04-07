@@ -14,6 +14,6 @@ class UsersController < ApplicationController
   private
 
   def cook_params
-    params.require(:user).permit(:bio, :profile_pic, :cover_pic, :opening_hour, :closing_hour, :banner, :avatar)
+    params.require(:user).permit(:bio, :opening_hour, :closing_hour, :banner, :avatar)
   end
 end
