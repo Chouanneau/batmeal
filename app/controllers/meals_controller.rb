@@ -73,7 +73,7 @@ class MealsController < ApplicationController
     @meal.user = current_user
 
     if @meal.save
-      redirect_to my_meals_path
+      redirect_to meals_path
     else
       render :new
     end
