@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid d-flex">
+  <div class="container-fluid d-flex navbar-container">
     <div class="basket">
       <% if user_signed_in? && current_user.orders.any? %>
           <%= link_to order_path(current_user.orders.last), class: "navbar-basket" do %>
