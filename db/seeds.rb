@@ -2,14 +2,6 @@ require "nokogiri"
 require "open-uri"
 require 'faker'
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 OrderedMeal.destroy_all
 Order.destroy_all
 Meal.destroy_all
@@ -78,22 +70,19 @@ end
 categories = ["starter", "main course", "desert", "drink"]
 users = User.where(role: "cook")
 
-# byebug
-
 doc.search('.card__recipe').first(19).each_with_index do |element, i|
 
   title = element.search('.card__title').text.strip
   description = element.search('.card__summary').text.strip
-  # byebug
 
   photo_url = element.search('.inner-container img').attribute('src').value
   if photo_url
     photo_file = URI.open(photo_url)
   else
-    photo_file = "https://www.google.com/search?q=meal+image&sxsrf=APq-WBu9oQjidS6REmblJ9Lo3w2XCWzzWw:1648553931603&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiWw_H7nev2AhUG_6QKHe2IARQQ_AUoAXoECAEQAw&biw=1489&bih=824&dpr=2#imgrc=AKz-OAB0-i4FzM"
+    photo_file = URI.open("https://www.google.com/search?q=meal+image&sxsrf=APq-WBu9oQjidS6REmblJ9Lo3w2XCWzzWw:1648553931603&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiWw_H7nev2AhUG_6QKHe2IARQQ_AUoAXoECAEQAw&biw=1489&bih=824&dpr=2#imgrc=AKz-OAB0-i4FzM")
   end
 
-  meal = Meal.create!(
+  meal = Meal.new(
     title: title,
     description: description,
     quantity: rand(1..9),
