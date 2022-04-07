@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get "/confirmation", to: "orders#confirmation"
   end
 
+  resources :ordered_meals, only: [:destroy]
 
   resources :users, only: [:new, :create] do
     collection do
