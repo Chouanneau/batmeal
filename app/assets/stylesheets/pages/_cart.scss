@@ -125,6 +125,13 @@
 	text-align: right;
 }
 
+.delete-button {
+  width: 16px;
+  img{
+    width: 100%;
+  }
+}
+
 .save{
 	padding-top: 5px;
 	font-size: 14px;
@@ -153,7 +160,7 @@ hr{
 }
 .checkout{
 	float: right;
-	margin-right: 5%;
+	margin-right: 12%;
 	width: 36%;
 }
 .total{

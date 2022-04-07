@@ -10,4 +10,10 @@ class OrderedMealsController < ApplicationController
 
     redirect_back(fallback_location: root_path)
   end
+
+  def destroy
+    @ordered_meal = OrderedMeal.find(params[:id])
+    @ordered_meal.destroy
+    redirect_to order_path(@ordered_meal.order)
+  end
 end

@@ -9,6 +9,9 @@
           <div class="count-amount">
             <div class="count"><%= ordered_meal.quantity %> x</div>
             <div class="amount"><%= ordered_meal.meal.price %>.-</div>
+            <div class="delete-button">
+              <%= link_to image_tag("https://cdn.icon-icons.com/icons2/2066/PNG/512/cross_circle_icon_125315.png"), ordered_meal_path(ordered_meal), method: :delete %>
+            </div>
           </div>
       </div>
     <% end %>
