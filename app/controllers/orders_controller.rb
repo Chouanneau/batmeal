@@ -9,5 +9,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:order_id])
     @ordered_meals = @order.ordered_meals
     @total_price = @order.total_price
+    Order.create({ user: current_user })
   end
 end

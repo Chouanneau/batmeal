@@ -2,10 +2,11 @@
   <div class="container-fluid d-flex">
     <div class="basket">
       <% if user_signed_in? && current_user.orders.any? %>
-          <%= link_to order_path(current_user.orders.first), class: "navbar-basket" do %>
+          <%= link_to order_path(current_user.orders.last), class: "navbar-basket" do %>
             <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
           <% end %>
-          <p class="pastille"><%= Order.joins(:ordered_meals).where(user: current_user).count %></p>
+          <p class="pastille"><%= current_user.orders.last.ordered_meals.count %></p>
+
       <% else %>
         <%= link_to "/", class: "navbar-basket" do %>
           <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
