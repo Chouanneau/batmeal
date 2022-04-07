@@ -13,7 +13,7 @@
         <h2><%= @user.username %></h2>
         <p><%= @user.bio %></p>
         <h3 class="opening"><%= @user.opening_hour %> - <%= @user.closing_hour %></h3>
-        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @user.avatar.key, height: 160, crop: :fill %>')">
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @user.avatar.key, height: 160, crop: :thumb, gravity: :face %>')">
         </div>
       </div>
     </div>
