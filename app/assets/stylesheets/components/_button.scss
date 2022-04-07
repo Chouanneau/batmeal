@@ -62,6 +62,30 @@
   border: 1px solid rgb(51, 139, 51);
 }
 
+.create-a-meal {
+  display: flex;
+  justify-content: center;
+}
+.button-create-a-meal2 {
+  color: white;
+  border: 1px solid white;
+  padding: 6px;
+  border-radius: 15px;
+  width: 40%;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  background-color: rgb(51, 139, 51);
+  border: 1px solid rgb(51, 139, 51);
+}
+
+.button-create-a-meal2:hover {
+  color: rgb(51, 139, 51);
+  background-color: white;
+  border: 1px solid rgb(51, 139, 51);
+}
+
+
 .button-create-cook {
   margin-bottom: 12px;
   width: 100%;
