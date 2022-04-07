@@ -96,7 +96,7 @@ doc.search('.card__recipe').first(19).each_with_index do |element, i|
   meal = Meal.create!(
     title: title,
     description: description,
-    quantity: rand(1..3),
+    quantity: rand(1..9),
     price: rand(3..10),
     category: categories.sample,
     date_time_start: Time.now,
