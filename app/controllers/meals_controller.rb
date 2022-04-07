@@ -5,6 +5,8 @@ class MealsController < ApplicationController
     @user_latitude = request.location.latitude
     @user_longitude = request.location.longitude
 
+
+
     if params[:search].present?
       sql_query = " \
       meals.title ILIKE :query \
