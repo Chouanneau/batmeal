@@ -26,12 +26,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item dropdown">
-            <% if current_user.avatar.attached? == true %>
               <%= cl_image_tag current_user.avatar.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% else %>
-            <%= image_tag "https://cdn-icons-png.flaticon.com/512/113/113339.png" %>
-            <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "My kitchen", "/my_meals", class: "dropdown-item"  if current_user.role == "cook"  %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
