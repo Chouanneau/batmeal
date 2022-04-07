@@ -23,7 +23,7 @@ file = "recipes.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 
-username = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Zoro", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
+username = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 first_name = ["Brice", "Matthieu", "David", "Alex", "Perry", "Momo", "Quentin", "Antoine", "Thibault", "Pedro", "Mario", "Alex", "Arthur", "Yannis", "Laurent", "Antonio", "Charlie", "Mathias", "Hans" ]
 last_name = ["Palau", "Chouanneau", "Cali", "Houston", "Manwel", "Siroté", "Ricard", "Gin", "Tonic", "Calster", "Chouanneau", "Chevalier", "Leloup", "Turbak", "Lieber", "Parizon", "De Turkheim", "Ledys", "Ferron" ]
 email = ["brice@gmail.com", "matthieu@gmail.com", "david@gmail.com", "alex@gmail.com", "perry@gmail.com", "momo@gmail.com", "quentin@gmail.com", "antoine@gmail.com", "thibault@gmail.com", "pedro@gmail.com", "marion@gmail.com", "alice@gmail.com", "arthur@gmail.com", "yannis@gmail.com", "laurent@gmail.com", "antonio@gmail.com", "charlie@gmail.com", "mathias@gmail.com", "hans@gmail.com" ]
