@@ -1,7 +1,7 @@
 class OrderedMealsController < ApplicationController
   def create
     @ordered_meal = OrderedMeal.new
-    @order = current_user.orders.first
+    @order = current_user.orders.last
     @ordered_meal.order = @order
     @meal = Meal.find(params[:meal_id])
     @ordered_meal.meal = @meal
