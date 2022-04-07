@@ -12,10 +12,13 @@
   border-bottom: 1px solid gray;
 }
 
+.navbar-container {
+  position: relative;
+}
+
 .basket{
   position: relative;
   height: 60px;
-  width: 260px;
 
   .navbar-basket img {
     margin-left: 20px;
@@ -43,11 +46,13 @@
 .brand {
   display: flex;
   height: 60px;
-  width: 260px;
   text-align: center;
   justify-content: center;
   text-decoration: none;
   color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
 
   .navbar-brand-name {
@@ -67,9 +72,8 @@
 .button-become-cook{
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: 60px;
-  width: 260px;
+  padding-right: 10px;
 
   .button-become {
     color: black;
@@ -79,6 +83,7 @@
     font-weight: lighter;
     transition: opacity 0.3s ease;
     text-decoration: none;
+    margin-right: 10px;
 
   }
 
