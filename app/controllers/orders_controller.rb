@@ -11,4 +11,10 @@ class OrdersController < ApplicationController
     @total_price = @order.total_price
     Order.create({ user: current_user })
   end
+
+  def destroy
+    @ordered_meal = OrderedMeal.find(params[:id])
+    @ordered_meal.destroy
+    redirect_to order_path
+  end
 end
