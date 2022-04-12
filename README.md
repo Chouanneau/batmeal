@@ -1,6 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
-
-Batmeal is a 2 week-full-stack project during my bootcamp with Le Wagon.
+Batmeal (https://batmeal.herokuapp.com/) is a 2 week-full-stack project during my bootcamp with Le Wagon (https://www.lewagon.com).
 
 The aim of this website is to promote local food made by individuals.
 
