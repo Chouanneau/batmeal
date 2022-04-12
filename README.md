@@ -9,11 +9,10 @@ Why keep using UberEats and promoting the delivery men's dodgy economy and lack 
 Did you know that ONE BILLION TONS of food is trashed every year?
 Did you know that this represents 20 PER CENT of all available food in the world?
 
-<a href="https://github.com/XBRTom" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/27707379?v=4" alt="html5" width="40" height="40"/></a>, <a href="https://github.com/dvdsms" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/43475046?v=4" alt="html5" width="40" height="40"/></a> and myself partnered to make this solution possible. 
+<a href="https://github.com/XBRTom" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/27707379?v=4" alt="html5" width="36" height="36"/></a> <a href="https://github.com/dvdsms" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/43475046?v=4" alt="html5" width="36" height="36"/></a> and myself partnered to make this solution possible. 
 
 
-We used :
-<p align="left"> 
+<p align="left"> We used :
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
