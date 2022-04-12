@@ -9,6 +9,11 @@ Why keep using UberEats and promoting the delivery men's dodgy economy and lack 
 Did you know that ONE BILLION TONS of food is trashed every year?
 Did you know that this represents 20 PER CENT of all available food in the world?
 
+Go to Batmeal -check what meal is available around you - order - pay - get it !
+
+Congratulations, you are saving the planet and helping your neighbors to get extra income.
+
+
 <a href="https://github.com/XBRTom" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/27707379?v=4" alt="html5" width="36" height="36"/></a> <a href="https://github.com/dvdsms" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/43475046?v=4" alt="html5" width="36" height="36"/></a> and myself partnered to make this solution possible. 
 
 
