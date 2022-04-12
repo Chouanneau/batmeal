@@ -1,4 +1,6 @@
-Batmeal (https://batmeal.herokuapp.com/) is a 2 week-full-stack project during my bootcamp with Le Wagon (https://www.lewagon.com).
+<a href="https://batmeal.herokuapp.com/" target="_blank" rel="noreferrer">Batmeal</a> is a 2 week-full-stack project during my bootcamp with
+<a href="https://www.lewagon.com" target="_blank" rel="noreferrer">Le Wagon</a>.
+
 
 The aim of this website is to promote local food made by individuals.
 
@@ -7,7 +9,9 @@ Why keep using UberEats and promoting the delivery men's dodgy economy and lack 
 Did you know that ONE BILLION TONS of food is trashed every year?
 Did you know that this represents 20 PER CENT of all available food in the world?
 
-The 3 of us https://github.com/dvdsms, https://github.com/XBRTom and myself partnered to make this solution possible. 
+<a href="https://github.com/XBRTom" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/27707379?v=4" alt="html5" width="40" height="40"/></a>, <a href="https://github.com/dvdsms" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/43475046?v=4" alt="html5" width="40" height="40"/></a> and myself partnered to make this solution possible. 
+
+
 We used :
 <p align="left"> 
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
