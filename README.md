@@ -4,7 +4,7 @@
 
 The aim of this website is to promote local food made by individuals.
 
-Why keep using UberEats and promoting the delivery men's dodgy economy and lack of social protection while your neighbors is perhaps throwing away the rests of delicious meals that he/she prepared for his/her family?
+Why keep using UberEats and promoting the delivery men's dodgy economy and lack of social protection while your neighbor is perhaps throwing away the rests of delicious meals that he/she prepared for his/her family?
 
 Did you know that ONE BILLION TONS of food is trashed every year?
 Did you know that this represents 20 PER CENT of all available food in the world?
